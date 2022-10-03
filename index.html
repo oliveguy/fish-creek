@@ -5,12 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Map || Fish Creek Provincial Park</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="asset/css/main.css">
+    <link rel="stylesheet" href="asset/css/aside.css">
+    <link rel="stylesheet" href="asset/css/modal.css">
 </head>
 <body>
-    <div id="modal">
+    <main>
+        <div id="welcomeModal">
 
-    </div>
+        </div>
+        <!-- Aside Bar Start -->
+        <a href="#" id="sidebarTrigger"><img src="asset/images/logo.svg" alt="logo" width="300" height="auto" id="logoimg"></a>
+        <aside id="sideBar">
+            <ul>
+                <li class="sidebaritems sidebarTitle"></li>
+                <li class="sidebaritems">Monster Library
+                    <ul>
+                        <li class="monsterList"><img><span class="monsterName">Batking</span><span class="siteName">Blue Devil Golf</span></li>
+                    </ul>
+                </li>
+                <li class="sidebaritems">Activity
+                    <ul>
+                        <li class="activityList"><img>Picnic</li>
+                    </ul>
+                </li>
+                <li class="sidebaritems">Parking Lot
+                    <ul>
+                        <li class="parkingList"><img>Picnic</li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <aside id="legend">
+            <ul>
+                <li class="legenditems legendTitle"><span id="collapseLegend"></span><span>Legend</span></li>
+                <li class="legenditems" id="poi"><img src="" art="" width="" height="" class="legendIcons">Point of interest</li>
+                <li class="legenditems" id="parking"><img src="" art="" width="" height="" class="legendIcons">Parking Lot</li>
+                <li class="legenditems" id="act"><img src="" art="" width="" height="" class="legendIcons">Activitiy</li>
+                <li class="legenditems" id="mload"><img src="" art="" width="" height="" class="legendIcons">Main Load</li>
+                <li class="legenditems" id="trail"><img src="" art="" width="" height="" class="legendIcons">Trail</li>
+                <li class="legenditems" id="river"><img src="" art="" width="" height="" class="legendIcons">River</li>
+            </ul>
+        </aside>
+        <aside id="bottomControl">
+            <a href="#">+</a>
+            <a href="#">-</a>
+            <a href="#"><img src="#" width="50" height="50"></a>
+        </aside>
+        <!-- Aside Bar End -->
+        <div id="svg">
+            background SVG
+        </div>
+        <div class="monsterModal">
+    
+        </div>
+    </main>
+    <script src="main.js"></script>
 </body>
 </html>
