@@ -1,3 +1,23 @@
 z-monstermodal{
     display:flex;
 }
+.z-monstermodal{
+    background-color: var(--window_bg);
+    color: var(--text_l);
+    width:35%;
+    padding:1rem;
+}
+.z-img{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.z-icon{
+    display:inline-block;
+}
+.z-user{
+    display:inline-block;
+}
+.z-lotbutton{
+    width:95%;
+}

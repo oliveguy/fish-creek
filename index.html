@@ -59,37 +59,40 @@
         </div>
         <div class="z-monstermodal">
             <h2>Location</h2>
-            <img src="cryptid.jpg" alt="Cryptid's picture goes here.">
+            <div  class="z-img"><img src="cryptid.jpg" alt="Cryptid's picture goes here."></div>
             <h3 class="z-monstername">Cryptid Name</h3>
             <p class="z-monsterdesc">This paragraph will provide a brief description of the cryptid's behaviour, location, recent sightings, physical appearance, and any other relevant information.</p>
-            <img src="location.jpg" alt="Location photograph goes here.">
+            <div  class="z-img"><img class="z-img" src="location.jpg" alt="Location photograph goes here."></div>
             <h3 class="z-locationname">Location Name</h3>
             <p class="z-locationdesc">This paragraph will provide a brief description of the point of interest labelled on the map.</p>
-            <h3 class="z-activities">Activities</h3>
-            <figure class="z-icon">
-                <img src="icon.png">
-                <figcaption>Activity</figcaption>
-            </figure>
-            <figure class="z-icon">
-                <img src="icon.png">
-                <figcaption>Activity</figcaption>
-            </figure>
-            <figure class="z-icon">
-                <img src="icon.png">
-                <figcaption>Activity</figcaption>
-            </figure>
+            <h3 class="z-activities-h">Activities</h3>
+            <div class="z-activities">
+                <figure class="z-icon">
+                    <img src="icon.png">
+                    <figcaption>Activity</figcaption>
+                </figure>
+                <figure class="z-icon">
+                    <img src="icon.png">
+                    <figcaption>Activity</figcaption>
+                </figure>
+                <figure class="z-icon">
+                    <img src="icon.png">
+                    <figcaption>Activity</figcaption>
+                </figure>
+            </div>
             <h3 class="z-parkinglots">Parking Lots</h3>
-            <button>Parking Lot</button>
-            <button>Parking Lot</button>
+            <button class="z-lotbutton">Parking Lot</button>
+            <button class="z-lotbutton">Parking Lot</button>
             <h3 class="z-reviews">User Reviews</h3>
-            <figure class="z-review">
-                <img src="user.jpg">
-                <figcaption>User Name</figcaption>
+            <figure class="z-reviewer">
+                <img class="z-user" src="user.jpg">
+                <figcaption class="z-user">User Name</figcaption>
             </figure>
-            <p>This paragraph will contain the written review by visitors to the site.</p>
-            <form>
-                <label for="z-review"></label>
-                <textarea name="z-review" class="z-review"></textarea>
+            <p class="z-review">This paragraph will contain the written review by visitors to the site.</p>
+            <form method="post" action="#">
+                <label for="z-testimonial"></label>
+                <textarea name="z-testimonial" class="z-testimonial"></textarea>
+                <input type="submit">SUBMIT</input>
             </form>
             
         </div>
