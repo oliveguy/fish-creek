@@ -1,0 +1,24 @@
+/* Colors */
+:root{
+    --main_accent: #74a34b;
+    --main_bg:#d3d3d3;
+
+    --main_btn: #BAE991;
+    --main_btn_text: #37422e;
+    --main_btn_hover: #74a34b;
+
+    --window_bg:#A2A2A2;
+    --window_line:#D5D9D9;
+
+    --text_l: #fff;
+    --text_d:#3B3B3B;
+}
+*{
+    box-sizing: border-box;
+}
+/* 
+USE EXAMPLE
+body{
+    background-color: var(--background_grey);
+} 
+*/
