@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* Colors */
 :root{
     --main_accent: #74a34b;
     --main_bg:#d3d3d3;
+    --main_bg_op:rgba(0, 0, 0, 0.3);
 
     --main_btn: #BAE991;
     --main_btn_text: #37422e;
@@ -12,13 +14,33 @@
 
     --text_l: #fff;
     --text_d:#3B3B3B;
-}
-*{
-    box-sizing: border-box;
+
+    --heading_font: 'Gemunu Libre', 'times' ,'sans-serif';
+    --body_font:'Roboto','times','sans-serif';
 }
 /* 
 USE EXAMPLE
 body{
     background-color: var(--background_grey);
+    font-family:var(--body_font);
 } 
 */
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family:var(--body_font);
+    position: relative;
+    margin:0 auto;
+    background-image: linear-gradient(40deg, red, yellow)
+}
+div#svgbg{
+    display:none;
+}
+ul, li{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style-type: none;
+}
