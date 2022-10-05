@@ -3,6 +3,7 @@
 :root{
     --main_accent: #74a34b;
     --main_bg:#d3d3d3;
+    --main_bg_op:rgba(0, 0, 0, 0.3);
 
     --main_btn: #BAE991;
     --main_btn_text: #37422e;
@@ -31,7 +32,7 @@ body{
     font-family:var(--body_font);
     position: relative;
     margin:0 auto;
-    background-image: linear-gradient(to right, pink , yellow);
+    background-image: linear-gradient(40deg, red, yellow)
 }
 div#svgbg{
     display:none;

@@ -16,32 +16,41 @@ img.logo{
     width: 200px;
 }
 /* ----------------------------------------- */
-aside#sideBar{
+nav#sideBar{
     /* display: none; */
     position: absolute;
     top:0;
     left:0;
     height: 100vh;
     /* text-align: center; */
-    background-color: var(--main_bg);
+    background-color: var(--main_bg_op);
 }
 ul#sidebar_top{
     display:flex;
     flex-direction: column;
-    padding:0 1rem;
+    padding:0;
     padding-top: 1rem;
 }
 img.closeBtn{
     width: 20px;
     height: 20px;
     margin-left: 1rem;
+    opacity: .5;
+    transition: all .5s;
 }
+img.closeBtn:hover{
+    opacity: .8;
+}
+
 ul#sidebar_top > li{
     list-style-type: none;
+    padding: 0 1rem;
+    border-bottom: 1px solid red;
 }
 ul#sidebar_top > li.sidebarTitle{
     display:flex;
     align-items:flex-start;
+    padding-bottom: 1rem;
 }
 /* ----------------------------------------- */
 aside#legend{
