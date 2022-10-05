@@ -1,3 +1,4 @@
-z-monstermodal{
+.z-monstermodal{
     display:flex;
+    display:none;
 }

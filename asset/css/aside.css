@@ -1,0 +1,56 @@
+div#sidebarTrigger{
+    position: absolute;
+    top:1rem;
+    left:1rem;
+    display: flex;
+    align-items: center;
+    opacity:1;
+    display: none;
+}
+img#hamburgerMenu{
+    width:30px;
+    height:auto;
+    margin-right: 1rem;
+}
+img.logo{
+    width: 200px;
+}
+/* ----------------------------------------- */
+aside#sideBar{
+    /* display: none; */
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100vh;
+    /* text-align: center; */
+    background-color: var(--main_bg);
+}
+ul#sidebar_top{
+    display:flex;
+    flex-direction: column;
+    padding:0 1rem;
+    padding-top: 1rem;
+}
+img.closeBtn{
+    width: 20px;
+    height: 20px;
+    margin-left: 1rem;
+}
+ul#sidebar_top > li{
+    list-style-type: none;
+}
+ul#sidebar_top > li.sidebarTitle{
+    display:flex;
+    align-items:flex-start;
+}
+/* ----------------------------------------- */
+aside#legend{
+    position:absolute;
+    top:0;
+    right:0;
+}
+/* ----------------------------------------- */
+aside#bottomControl{
+    display:none;
+}
+/* ----------------------------------------- */
