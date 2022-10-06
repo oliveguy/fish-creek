@@ -33,3 +33,19 @@ legendControl.addEventListener('click',()=>{
         legendPanel.style.right = "0px";
     }
 })
+// LEGEND PANEL MOUSE OVER
+function mousemove(e){
+    var xRatio = e.clientX/screen.width;
+    var yRatio = e.clientY/screen.height;
+    if( xRatio >= 0.9 && yRatio <= 0.3){
+        legendPanel.style.right = "0px";
+        legendControl.classList.add('rotateToLeft');
+        console.log('expand');
+    } else if(xRatio < 0.9 || yRatio > 0.3){
+        legendPanel.style.right = "-118px";
+        legendControl.classList.remove('rotateToLeft');
+        console.log('collapse');
+    }
+}
+
+window.addEventListener('mousemove', mousemove);
