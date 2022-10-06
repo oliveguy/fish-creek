@@ -117,7 +117,10 @@
         </nav>
         <aside class="legend">
             <ul>
-                <li class="legenditems legendTitle"><img src="/asset/images/dropdown.svg" width="18" height="18" alt="" class="legendctr"></span><span id="legendTop" class="legend_subheading">Legend</span></li>
+                <li class="legenditems legendTitle">
+                    <img src="/asset/images/dropdown.svg" width="18" height="18" class="legendctr"></span>
+                    <span id="legendTop" class="legend_subheading">Legend</span>
+                </li>
                 <li class="legenditems" id="poi"><img src="" art="" width="35" height="35" class="legendIcons"><span class="legend_subheading">Point of interest</span></li>
                 <li class="legenditems" id="parking"><img src="" art="" width="35" height="35" class="legendIcons"><span class="legend_subheading">Parking Lot</span></li>
                 <li class="legenditems" id="act"><img src="" art="" width="35" height="35" class="legendIcons"><span class="legend_subheading">Activitiy</span></li>
@@ -126,7 +129,7 @@
                 <li class="legenditems" id="river"><img src="" art="" width="35" height="35" class="legendIcons"><span class="legend_subheading">River</span></li>
             </ul>
         </aside>
-        <aside id="bottomControl">
+        <aside class="bottomControl">
             <a href="#">+</a>
             <a href="#">-</a>
             <a href="#"><img src="#" width="50" height="50"></a>
@@ -135,7 +138,7 @@
         <div id="svgbg">
             background SVG
         </div>
-        <div class="z-monstermodal">
+        <div class="z-monstermodal" style="display:none">
             <h2>Location</h2>
             <div  class="z-img"><img src="cryptid.jpg" alt="Cryptid's picture goes here."></div>
             <h3 class="z-monstername">Cryptid Name</h3>
@@ -175,43 +178,5 @@
         </div>
     </main>
     <script src="main.js"></script>
-    <script>
-        // SHOW / HIDE SIDE MANU
-            hamburgerMenu.addEventListener('click',(e)=>{
-                e.preventDefault();
-                sideBar.style.left = "0";
-                sidebarTrigger.style.display = "none";
-            })
-            closeSideBar.addEventListener('click',(e)=>{
-                e.preventDefault();
-                sideBar.style.left = "-270px";
-                sidebarTrigger.style.display = "flex";
-            })
-        // SHOW SUB MENU
-        const menus = document.querySelectorAll('.sidebaritems');
-        const menuItems = document.querySelectorAll('.hidden');
-        const dropArrow = document.querySelectorAll('.dropdownArrow');
-
-        for(let i=0 ; i<menus.length ; i++){
-            menus[i].addEventListener('click',()=>{
-                menuItems[i].classList.toggle('appear');
-                dropArrow[i].classList.toggle('rotate');
-                dropArrow[i].style.transitionDuration = '0.5s';
-            })
-        }
-        // --------------- //
-        // LEGEND PANEL //
-        var legendControl = document.getElementsByClassName('legendctr')[0];
-        var legendPanel = document.getElementsByClassName('legend')[0];
-        legendControl.addEventListener('click',()=>{
-            if(legendPanel.style.right == "0px"){
-                legendPanel.style.right = "-118px";
-            } else {
-                legendPanel.style.right = "0px";
-            }
-            legendControl.classList.toggle('rotateToLeft');
-        })
-
-    </script>
 </body>
 </html>

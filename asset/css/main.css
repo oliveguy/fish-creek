@@ -37,10 +37,11 @@ body{
 }
 main{
     position: relative;
+    height: 100vh;
 }
-/* div#svgbg{
+div#svgbg{
     display:none;
-} */
+}
 ul, li{
     margin:0;
     padding:0;

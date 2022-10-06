@@ -52,7 +52,6 @@
 }
 .z-monstermodal{
     display:flex;
-    display:none;
 }
 .z-monstermodal{
     background-color: var(--window_bg);
