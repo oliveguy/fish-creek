@@ -17,32 +17,98 @@
         <!-- Aside Bar Start -->
         <div id="sidebarTrigger">
             <a href="#"><img src="/asset/images/hamburger.svg" alt="hamburger menu" width="55" height="55" id="hamburgerMenu"></a>
-            <a href="#" id="sidebarTrigger"><img src="asset/images/logo.svg" alt="logo" width="300" height="auto" id="logo_img" class="logo"></a>
+            <a href="#"><img src="asset/images/logo_color.svg" alt="logo" width="300" height="auto" id="logo_img" class="logo"></a>
         </div>
         <nav id="sideBar">
             <ul id="sidebar_top">
-                <li class="sidebaritems sidebarTitle">
-                    <a href="#"><img src="asset/images/logo.svg" alt="logo" width="300" height="auto" id="logo_img_side" class="logo"></a>
-                    <a href="#"><img src="/asset/images/x_button.svg" alt="close button" width="30" height="30" class="closeBtn" id="close"></a>
+                <li class="sidebarTitle">
+                    <a href="index.html"><img src="asset/images/logo_white.svg" alt="logo" width="300" height="auto" id="logo_img_side" class="logo"></a>
+                    <a href="#" id="closeSideBar"><img src="/asset/images/x_button.svg" alt="close button" width="30" height="30" class="closeBtn"></a>
                 </li>
-                <li class="sidebaritems">Monster Library
-                    <ul>
-                        <li class="monsterList"><img><span class="monsterName">Batking</span><span class="siteName">Blue Devil Golf</span></li>
+                <!-- MONSTER -->
+                <li class="sidebaritems monster"><span class="sideBar_subheading">Monster Library<img src="/asset/images/dropdown.svg" alt="Arrow" width="15" height="15" class="dropdownArrow"></span>
+                    <ul class="hidden">
+                        <!-- In loop from DB -->
+                        <li class="subList">
+                            <a href="#"><img width="40" height="40" class="monsterIcon"></a>
+                            <div class="monster_siteContainer">
+                                <a href="#"><span class="subTitleHeading">Batking</span></a>
+                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
+                            </div>
+                        </li>
+                        <li class="subList">
+                            <a href="#"><img width="40" height="40" class="monsterIcon"></a>
+                            <div class="monster_siteContainer">
+                                <a href="#"><span class="subTitleHeading">Batking</span></a>
+                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
+                            </div>
+                        </li>
+                        <li class="subList">
+                            <a href="#"><img width="40" height="40" class="monsterIcon"></a>
+                            <div class="monster_siteContainer">
+                                <a href="#"><span class="subTitleHeading">Batking</span></a>
+                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
+                            </div>
+                        </li>
+                        <!-- ---------------- -->
                     </ul>
                 </li>
-                <li class="sidebaritems">Activity.
-                    <ul>
-                        <li class="activityList"><img><span class="activity">Picnic</span></li>
+                <!-- ACTIVITY -->
+                <li class="sidebaritems"><span class="sideBar_subheading">Activity<img src="/asset/images/dropdown.svg" alt="" width="15" height="15" class="dropdownArrow"></span>
+                    <ul class="hidden">
+                        <!-- In loop from DB -->
+                        <li class="subList">
+                            <a href="#"><img width="40" height="40" class="monsterIcon"></a>
+                            <div class="monster_siteContainer">
+                                <a href="#"><span class="subTitleHeading">Batking</span></a>
+                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
+                            </div>
+                        </li>
+                        <li class="subList">
+                            <a href="#"><img width="40" height="40" class="monsterIcon"></a>
+                            <div class="monster_siteContainer">
+                                <a href="#"><span class="subTitleHeading">Batking</span></a>
+                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
+                            </div>
+                        </li>
+                        <li class="subList">
+                            <a href="#"><img width="40" height="40" class="monsterIcon"></a>
+                            <div class="monster_siteContainer">
+                                <a href="#"><span class="subTitleHeading">Batking</span></a>
+                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
+                            </div>
+                        </li>
+                        <!-- ---------------- -->
                     </ul>
                 </li>
-                <li class="sidebaritems">Parking Lot
-                    <ul>
-                        <li class="parkingList"><span class="parking">Hull's Wood</span></li>
+                <!-- PARKING -->
+                <li class="sidebaritems"><span class="sideBar_subheading">Parking Lot<img src="/asset/images/dropdown.svg" alt="" width="15" height="15" class="dropdownArrow"></span>
+                    <ul class="hidden">
+                        <!-- In loop from DB -->
+                        <li class="subList parking">
+                            <div class="monster_siteContainer">
+                                <a href="#"><span class="subTitleHeading">Batking</span></a>
+                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
+                            </div>
+                        </li>
+                        <li class="subList parking">
+                            <div class="monster_siteContainer">
+                                <a href="#"><span class="subTitleHeading">Batking</span></a>
+                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
+                            </div>
+                        </li>
+                        <li class="subList parking">
+                            <div class="monster_siteContainer">
+                                <a href="#"><span class="subTitleHeading">Batking</span></a>
+                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
+                            </div>
+                        </li>
+                        <!-- ---------------- -->
                     </ul>
                 </li>
             </ul>
+            <img src="/asset/images/text_logo_white.svg" alt="text logo in white" width="268" height="71" id="whiteLogo">
         </nav>
-
         <aside id="legend">
             <ul>
                 <li class="legenditems legendTitle"><span id="collapseLegend"></span><span>Legend</span></li>
@@ -104,5 +170,33 @@
         </div>
     </main>
     <script src="main.js"></script>
+    <script>
+        // SHOW / HIDE SIDE MANU
+            hamburgerMenu.addEventListener('click',(e)=>{
+                e.preventDefault();
+                sideBar.style.left = "0";
+                sidebarTrigger.style.display = "none";
+            })
+            closeSideBar.addEventListener('click',(e)=>{
+                e.preventDefault();
+                sideBar.style.left = "-270px";
+                sidebarTrigger.style.display = "flex";
+            })
+        // SHOW SUB MENU
+        const menus = document.querySelectorAll('.sidebaritems');
+        const menuItems = document.querySelectorAll('.hidden');
+        const dropArrow = document.querySelectorAll('.dropdownArrow');
+
+        for(let i=0 ; i<menus.length ; i++){
+            menus[i].addEventListener('click',()=>{
+                menuItems[i].classList.toggle('appear');
+                dropArrow[i].classList.toggle('rotate');
+                dropArrow[i].style.transitionDuration = '0.5s';
+            })
+        }
+
+        // --------------- //
+    
+    </script>
 </body>
 </html>

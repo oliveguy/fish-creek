@@ -5,7 +5,6 @@ div#sidebarTrigger{
     display: flex;
     align-items: center;
     opacity:1;
-    display: none;
 }
 img#hamburgerMenu{
     width:30px;
@@ -15,21 +14,36 @@ img#hamburgerMenu{
 img.logo{
     width: 200px;
 }
-/* ----------------------------------------- */
+/* SCRIPT CLASS */
+.expand{
+    display:block;
+}
+.hidden{
+    display: none;
+    transition: all .5s;
+}
+.appear{
+    display:block;
+}
+.rotate{
+    transform: rotate(90deg);
+    transition: all .5s;
+}
+/* ---------------------SIDE BAR START-------------------- */
 nav#sideBar{
-    /* display: none; */
     position: absolute;
-    top:0;
-    left:0;
+    left:-270px;
     height: 100vh;
-    /* text-align: center; */
     background-color: var(--main_bg_op);
+    transition: all .5s;
 }
 ul#sidebar_top{
     display:flex;
     flex-direction: column;
     padding:0;
-    padding-top: 1rem;
+}
+li.sidebaritems{
+    border-top: 1px solid var(--text_d);
 }
 img.closeBtn{
     width: 20px;
@@ -41,18 +55,70 @@ img.closeBtn{
 img.closeBtn:hover{
     opacity: .8;
 }
-
+/* shared CSS for SideBAr */
+.subTitleHeading{
+    font-weight: bold;
+}
+span.sideBar_subheading{
+    padding:1rem 0.75rem;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+    color:var(--text_d);
+    transition: all .25s;
+}
+span.sideBar_subheading:hover{
+    background-color: var(--main_btn_hover);
+}
+img.dropdownArrow{
+    transition: all .5;
+}
 ul#sidebar_top > li{
     list-style-type: none;
-    padding: 0 1rem;
-    border-bottom: 1px solid red;
+    /* padding: 0 1rem; */
+    /* border-bottom: 1px solid red; */
 }
+li.sidebaritems{
+    padding:0;
+}
+/* ------------ */
+/* TOP LOGO */
 ul#sidebar_top > li.sidebarTitle{
     display:flex;
     align-items:flex-start;
     padding-bottom: 1rem;
+    padding:1rem;
 }
-/* ----------------------------------------- */
+/* ------------ */
+li.subList{
+    display:flex;
+    align-items:center;
+    padding: 0 1rem;
+}
+li.parking{
+    padding:0;
+}
+li.subList:hover{
+    background-color: var(--main_btn_hover);
+}
+li.subList > img.monsterIcon{
+    border-radius: 15px;
+    background-color: red;
+}
+li.subList > div.monster_siteContainer{
+    display:flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+img#whiteLogo{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+}
+/* --------------------SIDE BAR END--------------------- */
 aside#legend{
     position:absolute;
     top:0;
