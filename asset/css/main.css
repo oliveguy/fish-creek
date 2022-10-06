@@ -31,7 +31,7 @@ body{
 body{
     font-family:var(--body_font);
     margin:0 auto;
-    background-color:rgb(235, 194, 219);
+    background-image: linear-gradient(rgb(202, 202, 250), rgb(105, 65, 12));
     font-family: var(--body_font);
     overflow: hidden;
 }

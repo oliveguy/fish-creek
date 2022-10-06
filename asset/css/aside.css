@@ -46,6 +46,9 @@ ul#sidebar_top{
 li.sidebaritems{
     border-top: 1px solid var(--text_d);
 }
+li.sidebaritems:last-child{
+    border-bottom: 1px solid var(--text_d);
+}
 span.sideBar_subheading{
     font-family: var(--heading_font);
     font-size:large;
@@ -58,7 +61,7 @@ img.closeBtn{
     transition: all .5s;
 }
 img.closeBtn:hover{
-    opacity: .8;
+    opacity: .9;
 }
 /* shared CSS for SideBAr */
 .subTitleHeading{
@@ -106,7 +109,7 @@ li.parking{
     padding:0;
 }
 li.subList:hover{
-    background-color: var(--main_btn_hover);
+    background-color: var(--main_btn);
 }
 li.subList > img.monsterIcon{
     border-radius: 15px;
@@ -176,6 +179,9 @@ img.rotateToLeft{
 aside.bottomControl{
     /* display:none; */
     position:absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
     bottom:30px;
     width: 100px;
     border: 1px solid red;
