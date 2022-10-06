@@ -31,15 +31,16 @@ body{
 body{
     font-family:var(--body_font);
     margin:0 auto;
-    background-image: linear-gradient(40deg, red, yellow);
+    background-color:rgb(235, 194, 219);
     font-family: var(--body_font);
+    overflow: hidden;
 }
 main{
     position: relative;
 }
-div#svgbg{
+/* div#svgbg{
     display:none;
-}
+} */
 ul, li{
     margin:0;
     padding:0;

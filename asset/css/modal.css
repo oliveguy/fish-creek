@@ -1,7 +1,5 @@
-z-monstermodal{
-    display:flex;
-}
 .z-monstermodal{
+    display:flex;
     background-color: var(--window_bg);
     color: var(--text_l);
     width:35%;

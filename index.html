@@ -11,7 +11,8 @@
 </head>
 <body>
     <main>
-        <div id="welcomeModal">
+        <h1 style="display:none">Fish Creek Interative map</h1>
+        <div id="welcomeModal" style="display:none">
             <img src="logo.png">
             <h1>Fish Creek Provincial Park</h1>
             <h2>Cryptid Directory and Map</h2>
@@ -114,15 +115,15 @@
             </ul>
             <img src="/asset/images/text_logo_white.svg" alt="text logo in white" width="268" height="71" id="whiteLogo">
         </nav>
-        <aside id="legend">
+        <aside class="legend">
             <ul>
-                <li class="legenditems legendTitle"><span id="collapseLegend"></span><span>Legend</span></li>
-                <li class="legenditems" id="poi"><img src="" art="" width="" height="" class="legendIcons">Point of interest</li>
-                <li class="legenditems" id="parking"><img src="" art="" width="" height="" class="legendIcons">Parking Lot</li>
-                <li class="legenditems" id="act"><img src="" art="" width="" height="" class="legendIcons">Activitiy</li>
-                <li class="legenditems" id="mload"><img src="" art="" width="" height="" class="legendIcons">Main Load</li>
-                <li class="legenditems" id="trail"><img src="" art="" width="" height="" class="legendIcons">Trail</li>
-                <li class="legenditems" id="river"><img src="" art="" width="" height="" class="legendIcons">River</li>
+                <li class="legenditems legendTitle"><img src="/asset/images/dropdown.svg" width="18" height="18" alt="" class="legendctr"></span><span id="legendTop" class="legend_subheading">Legend</span></li>
+                <li class="legenditems" id="poi"><img src="" art="" width="35" height="35" class="legendIcons"><span class="legend_subheading">Point of interest</span></li>
+                <li class="legenditems" id="parking"><img src="" art="" width="35" height="35" class="legendIcons"><span class="legend_subheading">Parking Lot</span></li>
+                <li class="legenditems" id="act"><img src="" art="" width="35" height="35" class="legendIcons"><span class="legend_subheading">Activitiy</span></li>
+                <li class="legenditems" id="mload"><img src="" art="" width="35" height="35" class="legendIcons"><span class="legend_subheading">Main Load</span></li>
+                <li class="legenditems" id="trail"><img src="" art="" width="35" height="35" class="legendIcons"><span class="legend_subheading">Trail</span></li>
+                <li class="legenditems" id="river"><img src="" art="" width="35" height="35" class="legendIcons"><span class="legend_subheading">River</span></li>
             </ul>
         </aside>
         <aside id="bottomControl">
@@ -171,7 +172,6 @@
                 <textarea name="z-testimonial" class="z-testimonial" rows="10"></textarea>
                 <input class="z-submit" type="submit" value="SUBMIT">
             </form>
-            
         </div>
     </main>
     <script src="main.js"></script>
@@ -199,9 +199,19 @@
                 dropArrow[i].style.transitionDuration = '0.5s';
             })
         }
-
         // --------------- //
-    
+        // LEGEND PANEL //
+        var legendControl = document.getElementsByClassName('legendctr')[0];
+        var legendPanel = document.getElementsByClassName('legend')[0];
+        legendControl.addEventListener('click',()=>{
+            if(legendPanel.style.right == "0px"){
+                legendPanel.style.right = "-118px";
+            } else {
+                legendPanel.style.right = "0px";
+            }
+            legendControl.classList.toggle('rotateToLeft');
+        })
+
     </script>
 </body>
 </html>
