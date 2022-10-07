@@ -1,6 +1,8 @@
 .z-monstermodal{
     display:flex;
+    flex-direction:column;
     background-color: var(--window_bg);
+    opacity: .8;
     color: var(--text_l);
     width:35%;
     padding:1rem;
@@ -50,15 +52,7 @@
     color: var(--text_l);
     cursor:pointer;
 }
-.z-monstermodal{
-    display:flex;
-}
-.z-monstermodal{
-    background-color: var(--window_bg);
-    color: var(--text_l);
-    width:35%;
-    padding:1rem;
-}
+
 .z-img{
     display:flex;
     justify-content:center;
@@ -72,4 +66,10 @@
 }
 .z-lotbutton{
     width:95%;
+}
+
+@media screen and (max-width:400px){
+    .z-monstermodal{
+        width:95%;
+    }
 }
