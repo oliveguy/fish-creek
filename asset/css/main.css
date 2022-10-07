@@ -4,6 +4,7 @@
     --main_accent: #74a34b;
     --main_bg:#d3d3d3;
     --main_bg_op:rgba(0, 0, 0, 0.3);
+    --main_bg_wh:#fff;
 
     --main_btn: #BAE991;
     --main_btn_text: #37422e;
@@ -51,5 +52,5 @@ li{
 }
 a, a:visited{
     text-decoration: none;
-    color:var(--text_d);
+    color:var(--text_l);
 }
