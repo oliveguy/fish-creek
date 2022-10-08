@@ -1,3 +1,79 @@
+
+.z-monstermodal{
+    display:flex;
+    flex-direction:column;
+    background-color: var(--window_bg);
+    opacity: .8;
+    color: var(--text_l);
+    width:35%;
+    padding:1rem;
+}
+.z-img{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.z-icon{
+    display:inline-block;
+}
+.z-user{
+    display:inline-block;
+}
+.z-lotbutton{
+    width:95%;
+    padding:1rem;
+    background-color: var(--main_btn);
+    color: var(--main_btn_text);
+    border:none;
+    border-radius:10px;
+    font-size:1.2rem;
+}
+.z-lotbutton:hover{
+    background-color: var(--main_btn_hover);
+    color: var(--text_l);
+    cursor:pointer;
+}
+.z-testimonial{
+    width:95%;
+    border-radius:10px;
+    padding:1rem;
+}
+.z-submit{
+    display:block;
+    width:95%;
+    padding:1rem;
+    background-color: var(--main_btn);
+    color: var(--main_btn_text);
+    border:none;
+    border-radius:10px;
+    font-size:1.2rem;
+}
+.z-submit:hover{
+    background-color: var(--main_btn_hover);
+    color: var(--text_l);
+    cursor:pointer;
+}
+
+.z-img{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.z-icon{
+    display:inline-block;
+}
+.z-user{
+    display:inline-block;
+}
+.z-lotbutton{
+    width:95%;
+}
+
+@media screen and (max-width:400px){
+    .z-monstermodal{
+        width:95%;
+    }
+=======
 .z-monstermodal{
     display:flex;
     flex-direction: column;
@@ -73,4 +149,5 @@
 }
 .z-lotbutton{
     width:95%;
+
 }
