@@ -35,17 +35,25 @@ legendControl.addEventListener('click',()=>{
 })
 // LEGEND PANEL MOUSE OVER
 function mousemove(e){
+    console.log("X "+e.clientX);
+    console.log("Y "+e.clientY);
     var xRatio = e.clientX/screen.width;
     var yRatio = e.clientY/screen.height;
     if( xRatio >= 0.9 && yRatio <= 0.3){
         legendPanel.style.right = "0px";
         legendControl.classList.add('rotateToLeft');
-        console.log('expand');
     } else if(xRatio < 0.9 || yRatio > 0.3){
         legendPanel.style.right = "-118px";
         legendControl.classList.remove('rotateToLeft');
-        console.log('collapse');
     }
 }
-
+// Refactoring work needed
+// document.body.offsetWidth
+// document.body.offsetHeight
 window.addEventListener('mousemove', mousemove);
+
+// scroll Zoom
+function myFunction(e) {
+    var y = e.deltaY;
+    document.getElementById("demo").innerHTML = y;
+  }
