@@ -81,6 +81,7 @@ span.sideBar_subheading{
 }
 span.sideBar_subheading:hover{
     background-color: var(--main_btn_hover);
+    color: var(--text_d);
 }
 img.dropdownArrow{
     transition: all .5;
@@ -114,6 +115,7 @@ li.parking{
 }
 li.subList:hover{
     background-color: var(--main_btn);
+    color: var(--text_d);
 }
 li.subList > img.monsterIcon{
     border-radius: 15px;
@@ -143,6 +145,7 @@ aside.legend{
     opacity: 0.8;
     z-index: 20;
     transition: right .25s linear;
+    box-shadow: 0 0 4px black;
 }
 aside#legend:hover{
     opacity:1;
@@ -151,6 +154,10 @@ ul > li.legenditems{
     padding: 0.25rem 0;
     display: flex;
     align-items: center;
+}
+ul > li.legenditems:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 ul > li.legendTitle{
     display:flex;
@@ -178,6 +185,7 @@ img.rotateToLeft{
 }
 .appearToLeft{
     right:0px;
+    opacity: 1;
 }
 /* ----------------------------------------- */
 aside.bottomControl{

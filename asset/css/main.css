@@ -3,7 +3,7 @@
 :root{
     --main_accent: #74a34b;
     --main_bg:#d3d3d3;
-    --main_bg_op:rgba(0, 0, 0, 0.3);
+    --main_bg_op:rgba(0, 0, 0, 0.7);
     --main_bg_wh:#fff;
 
     --main_btn: #BAE991;
@@ -20,13 +20,8 @@
     --heading_font: 'Gemunu Libre', 'times' ,'sans-serif';
     --body_font:'Roboto','times','sans-serif';
 }
-/* 
-USE EXAMPLE
-body{
-    background-color: var(--background_grey);
-    font-family:var(--body_font);
-} 
-*/
+
+
 *{
     box-sizing: border-box;
 }
@@ -42,7 +37,7 @@ main{
     height: 100vh;
 }
 div#svgbg{
-    display:none;
+    display:block;
 }
 ul, li{
     margin:0;

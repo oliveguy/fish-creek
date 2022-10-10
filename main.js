@@ -10,12 +10,13 @@ closeSideBar.addEventListener('click',(e)=>{
     sidebarTrigger.style.display = "flex";
 })
 // SHOW SUB MENU
-const menus = document.querySelectorAll('.sidebaritems');
+const menus = document.querySelectorAll('.sideBar_subheading');
 const menuItems = document.querySelectorAll('.hidden');
 const dropArrow = document.querySelectorAll('.dropdownArrow');
 
 for(let i=0 ; i<menus.length ; i++){
-    menus[i].addEventListener('click',()=>{
+    menus[i].addEventListener('click',(e)=>{
+        e.preventDefault();
         menuItems[i].classList.toggle('appear');
         dropArrow[i].classList.toggle('rotate');
         dropArrow[i].style.transitionDuration = '0.5s';
@@ -34,26 +35,38 @@ legendControl.addEventListener('click',()=>{
     }
 })
 // LEGEND PANEL MOUSE OVER
-function mousemove(e){
-    console.log("X "+e.clientX);
-    console.log("Y "+e.clientY);
-    var xRatio = e.clientX/screen.width;
-    var yRatio = e.clientY/screen.height;
-    if( xRatio >= 0.9 && yRatio <= 0.3){
+let legendslide = document.querySelector('.legend');
+    legendslide.addEventListener('mouseover',(e)=>{
         legendPanel.style.right = "0px";
         legendControl.classList.add('rotateToLeft');
-    } else if(xRatio < 0.9 || yRatio > 0.3){
+        document.querySelector('.legend').style.opacity = 1;
+    })
+    legendslide.addEventListener('mouseout',(e)=>{
         legendPanel.style.right = "-118px";
         legendControl.classList.remove('rotateToLeft');
-    }
-}
-// Refactoring work needed
-// document.body.offsetWidth
-// document.body.offsetHeight
-window.addEventListener('mousemove', mousemove);
+        document.querySelector('.legend').style.opacity = 0.9;
+    })
 
 // scroll Zoom
-function myFunction(e) {
-    var y = e.deltaY;
-    document.getElementById("demo").innerHTML = y;
-  }
+// function myFunction(e) {
+//         var y = e.deltaY;
+//         console.log(e);
+//         document.getElementById("demo").innerHTML = y;
+//       }
+    
+// window.addEventListener('wheel',(e)=>{
+//     if(e.deltaY<0){
+//         // ZOOM IN
+//         console.log('zoom in')
+//         console.log(e);
+//     } else {
+//         // ZOOM OUT
+//         console.log('zoom out')
+//         console.log(e.deltaY)
+//     }
+// })
+
+
+
+
+// bg_svg.width.animVal.valueInSpecifiedUnits
