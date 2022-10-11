@@ -1,4 +1,15 @@
 
+#welcomeModal{
+    display:flex;
+    flex-direction:column;
+    background-color: var(--window_bg);
+    opacity: .8;
+    color: var(--text_l);
+    width:35%;
+    padding:1rem;
+    justify-content:center;
+    align-items:center; 
+}
 .z-monstermodal{
     /* display:flex; */
     display:none;
