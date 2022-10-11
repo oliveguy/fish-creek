@@ -46,27 +46,3 @@ let legendslide = document.querySelector('.legend');
         legendControl.classList.remove('rotateToLeft');
         document.querySelector('.legend').style.opacity = 0.9;
     })
-
-// scroll Zoom
-// function myFunction(e) {
-//         var y = e.deltaY;
-//         console.log(e);
-//         document.getElementById("demo").innerHTML = y;
-//       }
-    
-// window.addEventListener('wheel',(e)=>{
-//     if(e.deltaY<0){
-//         // ZOOM IN
-//         console.log('zoom in')
-//         console.log(e);
-//     } else {
-//         // ZOOM OUT
-//         console.log('zoom out')
-//         console.log(e.deltaY)
-//     }
-// })
-
-
-
-
-// bg_svg.width.animVal.valueInSpecifiedUnits

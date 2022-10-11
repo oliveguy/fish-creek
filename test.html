@@ -20,7 +20,7 @@
         <li id="mon1">Monster No.1</li>
         <li id="mon2">Monster No.2</li>
     </ul>
-    <h2>Monster Detail</h2>
+    <h2 class="heading">Monster Detail</h2>
     <p id="text"></p>
     <p id="text2"></p>
     <script>
@@ -33,13 +33,16 @@
                 })}
             }
         }
+        var batking = new monster('batking',2);
         
         mon1.addEventListener('click',()=>{
             fetch('test.php?id=1')
             .then(res => res.json())
             .then(function(data){
                 console.log(data);
-                var monName = new monster(data.monsterName,data.monsterLv);
+                // var monName = new monster(data.monsterName,data.monsterLv);
+                text.innerHTML = data.monName;
+                text2.innerHTML = data.monLv;
             })
             .catch(function(error){
                 console.log('fail');
@@ -50,13 +53,18 @@
             .then(res => res.json())
             .then(function(data){
                 console.log(data);
-                text.innerHTML = data.monsterName;
-                text2.innerHTML = data.monsterLv;
+                text.innerHTML = data.monName;
+                text2.innerHTML = data.monLv;
+                monsterObj = data;
             })
             .catch(function(error){
                 console.log('fail');
             })
         });
+
+        var h2 = document.querySelectorAll('.heading')[0];
+        h2.setAttribute('id','Batking')
+
     </script>
 </body>
 </html>
