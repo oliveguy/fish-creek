@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style-type: none;
+        }
+        li:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Moster List</h1>
+    <ul>
+        <li id="mon1">Monster No.1</li>
+        <li id="mon2">Monster No.2</li>
+    </ul>
+    <h2>Monster Detail</h2>
+    <p id="text"></p>
+    <p id="text2"></p>
+    <script>
+        mon1.addEventListener('click',()=>{
+            fetch('test.php?id=1')
+            .then(res => res.json())
+            .then(function(data){
+                console.log(data);
+                text.innerHTML = data.monsterName;
+                text2.innerHTML = data.monsterLv;
+            })
+            .catch(function(error){
+                console.log('fail');
+            })
+        });
+        mon2.addEventListener('click',()=>{
+            fetch('test.php?id=2')
+            .then(res => res.json())
+            .then(function(data){
+                console.log(data);
+                text.innerHTML = data.monsterName;
+                text2.innerHTML = data.monsterLv;
+            })
+            .catch(function(error){
+                console.log('fail');
+            })
+        });
+    </script>
+</body>
+</html>
