@@ -24,13 +24,22 @@
     <p id="text"></p>
     <p id="text2"></p>
     <script>
+        class monster{
+            constructor(mon_name, mon_lv){
+                this.mosterName = mon_name;
+                this.mosterLv=mon_lv;
+                this.showModal = function(){this.addEventListener('click',function(){
+                    document.querySelector('#'+monName).style.display = "block";
+                })}
+            }
+        }
+        
         mon1.addEventListener('click',()=>{
             fetch('test.php?id=1')
             .then(res => res.json())
             .then(function(data){
                 console.log(data);
-                text.innerHTML = data.monsterName;
-                text2.innerHTML = data.monsterLv;
+                var monName = new monster(data.monsterName,data.monsterLv);
             })
             .catch(function(error){
                 console.log('fail');
