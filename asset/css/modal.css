@@ -112,14 +112,15 @@ div.z-activities{
 
 @media screen and (max-width:400px){
 
-    .z-monstermodal{
+    /* .z-monstermodal{
         display:flex;
+        display:none;
         flex-direction: column;
         background-color: var(--window_bg);
         color: var(--text_l);
         width:35%;
         padding:1rem;
-    }
+    } */
     .z-img{
         display:flex;
         justify-content:center;
@@ -165,7 +166,7 @@ div.z-activities{
         color: var(--text_l);
         cursor:pointer;
     }
-    .z-monstermodal{
+    /* .z-monstermodal{
         display:flex;
     }
     .z-monstermodal{
@@ -173,7 +174,7 @@ div.z-activities{
         color: var(--text_l);
         width:90%;
         padding:1rem;
-    }
+    } */
     .z-img{
         display:flex;
         justify-content:center;
