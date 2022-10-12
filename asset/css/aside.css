@@ -5,6 +5,7 @@ div#sidebarTrigger{
     display: flex;
     align-items: center;
     opacity:1;
+    z-index: 50;
 }
 img#hamburgerMenu{
     width:30px;
@@ -13,6 +14,9 @@ img#hamburgerMenu{
 }
 img.logo{
     width: 200px;
+}
+aside, nav{
+    z-index: 50;
 }
 /* SCRIPT CLASS */
 .expand{
