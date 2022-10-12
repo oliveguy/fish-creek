@@ -41,8 +41,8 @@
     transition: all .5s;
 }
 /* WELCOME MODAL END */
-.z-monstermodal{
-    /* display:flex; */
+/* .z-monstermodal{
+    display:flex;
     display:none;
     flex-direction:column;
     position: absolute;
@@ -57,6 +57,27 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
+} */
+.z-monstermodal{
+    display:flex;
+    display:none;
+    flex-direction:column;
+    position: absolute;
+    top: 3rem;
+    left:0;
+    right:0;
+    height: 90vh;
+    text-align: center;
+    z-index: 99;
+    background-color: var(--window_bg);
+    color: var(--text_l);
+    width:700px;
+    padding:1.5rem;
+    margin:0 auto;
+    justify-content:center;
+    align-items:center; 
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #fff;
 }
 .z-close{
     display:flex;
@@ -116,20 +137,32 @@ div.z-activities{
     color: var(--text_l);
     cursor:pointer;
 }
-.z-testimonial{
-    width:95%;
+input.name_input{
+    border: none;
     border-radius:10px;
-    padding:1rem;
+    text-align: center;
+}
+.z-testimonial{
+    border: none;
+    border-radius:10px;
+    width:100%;
+    text-align: center;
+}
+li.z-reviewer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+form.review_post{
+    display: flex;
+    justify-content: space-between;
 }
 .z-submit{
-    display:block;
-    width:95%;
-    padding:1rem;
+    padding:.5rem;
     background-color: var(--main_btn);
     color: var(--main_btn_text);
     border:none;
     border-radius:10px;
-    font-size:1.2rem;
 }
 .z-submit:hover{
     background-color: var(--main_btn_hover);
@@ -151,7 +184,23 @@ div.z-activities{
 .z-lotbutton{
     width:95%;
 }
-
+@media screen and (max-width:650px){
+    #welcomeModal{
+        display:none;
+        top: 2rem;
+        width:90%;
+        padding:1rem;
+        margin:0 auto;
+        font-size: smaller;
+    }
+    img#welcomeLogo{
+        width:90px;
+        height:90px;
+    }
+    .z-monstermodal{
+        width:95vw;
+    }
+}
 @media screen and (max-width:400px){
 
     /* .z-monstermodal{
@@ -230,6 +279,5 @@ div.z-activities{
     }
     .z-lotbutton{
         width:95%;
-
     }
 }

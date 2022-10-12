@@ -46,3 +46,14 @@ let legendslide = document.querySelector('.legend');
         legendControl.classList.remove('rotateToLeft');
         document.querySelector('.legend').style.opacity = 0.9;
     })
+// LEGEND ICON
+const legendItems = document.querySelectorAll('.legenditems');
+const legendIcons = document.querySelectorAll('.legendIcons');
+const iconsOnMap = ['.mon','.Parking_x5F_icon','.road_for_car','.trails','.river']
+
+for(let i =0;i<legendItems.length;i++){
+    legendItems[i].addEventListener('click',()=>{
+        legendIcons[i].classList.toggle('showColor');
+        
+    })
+}

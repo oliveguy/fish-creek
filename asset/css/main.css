@@ -28,13 +28,14 @@
 body{
     font-family:var(--body_font);
     margin:0 auto;
-    background-image: linear-gradient(rgb(202, 202, 250), rgb(105, 65, 12));
+    /* background-image: linear-gradient(rgb(202, 202, 250), rgb(105, 65, 12)); */
+    background-color: var(--main_bg);
     font-family: var(--body_font);
-    overflow: hidden;
 }
 main{
     position: relative;
     height: 100vh;
+    overflow: hidden;
 }
 div#blackBG{
     display:none;

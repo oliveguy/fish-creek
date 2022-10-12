@@ -136,6 +136,13 @@ img#whiteLogo{
     margin-right: auto;
     display:block;
 }
+p#trademark{
+    font-size: .6rem;
+    max-width: 35ch;
+    margin:0 auto;
+    color:var(--text_l);
+    text-align: center;
+}
 /* --------------------SIDE BAR END--------------------- */
 /* --------------------LEGEND START--------------------- */
 aside.legend{
@@ -166,6 +173,8 @@ ul > li.legenditems:hover{
 ul > li.legendTitle{
     display:flex;
     justify-content: flex-start;
+    padding: 0.25rem 0;
+    align-items: center;
 }
 img.legendctr{
     margin:.25rem;
@@ -190,6 +199,17 @@ img.rotateToLeft{
 .appearToLeft{
     right:0px;
     opacity: 1;
+}
+.legendIcons{
+    filter:grayscale();
+    transition: all .25s;
+}
+.legendIcons:hover{
+    filter:none;
+}
+
+.showColor{
+    filter:none;
 }
 /* ----------------------------------------- */
 aside.bottomControl{

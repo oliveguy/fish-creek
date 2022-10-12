@@ -1,9 +1,8 @@
-
 var mouseStartPosition = {x: 0, y: 0};
 var mousePosition = {x: 0, y: 0};
 var viewboxStartPosition = {x: 0, y: 0};
 var viewboxPosition = {x: 0, y: 0};
-var viewboxSize = {x: 700, y: 1085.33};
+var viewboxSize = {x: 700, y: 1085};
 var viewboxScale = 1.25;
 
 var mouseDown = false;
@@ -45,7 +44,7 @@ function setviewbox()
     viewboxPosition.y = 0;
   }
 
-  console.log(vp.x+' / '+ vp.y);
+  // console.log(vp.x+' / '+ vp.y);
 }
 
 function mousemove(e)
@@ -53,7 +52,7 @@ function mousemove(e)
   mousePosition.x = e.offsetX;
   mousePosition.y = e.offsetY;
   
-//   console.log("X->"+mousePosition.x+" Y->"+mousePosition.y)''
+  // console.log("X->"+mousePosition.x+" Y->"+mousePosition.y);
   if (mouseDown)
   {
     viewboxPosition.x = viewboxStartPosition.x + (mouseStartPosition.x - e.pageX) * viewboxScale;
@@ -89,3 +88,15 @@ function wheel(e) {
     setviewbox();
   }
 }
+// RESPONSIVE MAP
+function responsive(x) {
+  if (x.matches) { // If media query matches
+    bg_svg.setAttribute("viewBox","0 0 1085 1920");
+  } else{
+    bg_svg.setAttribute("viewBox","0 700 1085 1920");
+  }
+}
+
+var x = window.matchMedia("(max-width: 825px)")
+responsive(x)
+x.addListener(responsive)
