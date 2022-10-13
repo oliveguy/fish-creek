@@ -1,9 +1,6 @@
 <?php
-include("asset/php_module/db_connection.php")
+include("db_connection.php");
 
-    if(!$connection){
-        die(mysql_connect_error());
-    } 
     $id = $_GET['id'];
     $id_review = $_GET['id_review'];
 

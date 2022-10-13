@@ -44,7 +44,7 @@ div#blackBG{
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    /* transition: 1.5s all; */
+    transition: 1.5s all;
 
 }
 div#svgbg{
