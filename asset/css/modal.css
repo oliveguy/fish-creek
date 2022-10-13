@@ -17,6 +17,7 @@
     align-items:center; 
     border-radius: 20px;
     box-shadow: 0px 0px 10px #fff;
+
     /* transition: 0.5s all; */
 }
 #welcomeModal > h2{
@@ -78,11 +79,11 @@
     border-radius: 20px;
     box-shadow: 0px 0px 10px #fff;
 }
-.z-close{
+.z-close, #welcomeclose{
     width:100%;
     text-align: right;
 }
-.closeBtnImg{
+.closeBtnImg, .closeBtnImg_1{
     filter: brightness(3.0);
     transition: .25s all;
 }

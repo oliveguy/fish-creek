@@ -77,7 +77,7 @@ var modalCtr = {
     }
 }
 //Close
-document.querySelectorAll('.closeBtnImg')[0].addEventListener('click',()=>{
+document.querySelectorAll('.closeBtnImg_1')[0].addEventListener('click',()=>{
     modalCtr.modalClose('.z-monstermodal');
 })
 const monsters = document.querySelectorAll('.monster_svg');

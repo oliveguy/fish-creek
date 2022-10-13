@@ -7,7 +7,10 @@ closeWelcome.addEventListener('click',()=>{
     document.querySelector('#welcomeModal').style.display = "none";
     document.querySelector('#blackBG').style.display = "none";
 })
-
+welcomeclose.addEventListener('click',()=>{
+    document.querySelector('#welcomeModal').style.display = "none";
+    document.querySelector('#blackBG').style.display = "none";
+})
 
 function showModal(target, display){
     document.querySelector(target).style.display = display;

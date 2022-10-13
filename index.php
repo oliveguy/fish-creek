@@ -17,6 +17,10 @@ include('asset/php_module/db_connection.php');
     <main>
         <h1 style="display:none">Fish Creek Interative map</h1>
         <div id="welcomeModal">
+			<a href="#" id="welcomeclose">
+                <span> </span>
+                <img src="asset/images/x_button.svg" alt="close button" width="20" height="20" class="closeBtnImg">
+            </a>
             <img src="asset/images/logo_color_squre.svg" width="150" height="150" id="welcomeLogo">
             <h2>Fish Creek Provincial Park</h2>
             <h3>Cryptid Directory and Map</h3>
@@ -1121,7 +1125,7 @@ include('asset/php_module/db_connection.php');
         <div class="z-monstermodal">
             <a href="#" class="z-close">
                 <span> </span>
-                <img src="asset/images/x_button.svg" alt="close button" width="20" height="20" class="closeBtnImg">
+                <img src="asset/images/x_button.svg" alt="close button" width="20" height="20" class="closeBtnImg_1">
             </a>
             <img src="#" alt="Cryptid's picture goes here." width="200" height="200" class="z-img">
             <h3 class="z-mon_name"></h3>

@@ -37,7 +37,7 @@ aside, nav{
 /* ---------------------SIDE BAR START-------------------- */
 nav#sideBar{
     position: absolute;
-    left:-270px;
+    left:-290px;
     height: 100vh;
     background-color: var(--main_bg_op);
     z-index: 30;
@@ -129,6 +129,9 @@ li.subList > div.monster_siteContainer{
     display:flex;
     flex-direction: column;
     margin-left: .5rem;
+}
+div.monster_siteContainer > a:hover{
+    color:var(--text_d);
 }
 span.siteName{
     font-size: .75rem;
