@@ -98,6 +98,7 @@ div.containerScroll{
     border-radius: 20px;
     margin:0;
     padding: 1rem;
+    margin-top: 1rem;
     background-color: var(--modal_inner_bg);
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -117,6 +118,9 @@ div.z-activities{
 }
 .z-icon{
     display:inline-block;
+}
+li.z-reviewer > p{
+    margin: .25rem;
 }
 .z-user{
     display:inline-block;
@@ -151,6 +155,7 @@ li.z-reviewer{
     display:flex;
     justify-content: space-between;
     align-items: center;
+    font-size: .75rem;
 }
 form.review_post{
     display: flex;

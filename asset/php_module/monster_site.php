@@ -2,7 +2,7 @@
 include("db_connection.php");
 
     $id = $_GET['id'];
-    $id_review = $_GET['id_review'];
+    // $id_r = $_GET['id_review'];
 
     $query = "SELECT * FROM monster_site WHERE id=$id";
     $sql = mysqli_query($connection,$query);
@@ -21,7 +21,16 @@ include("db_connection.php");
         $obj->activity=$row['site_activity'];
         $obj->facilities=$row['site_facilities'];
 
-        $objJSON=json_encode($obj);
+        // review
+            // $query = "SELECT * FROM review WHERE site_id=$id_r";
+            // $sql = mysqli_query($connection,$query);
+            // $reviews = [];
+            // while($row = mysqli_fetch_array($sql)){
+            //     $each_review = [$row['content_author'],$row['content_content'],$row['content_date']];
+            //     array_push($reviews, $each_review);
+            // }
+            // $obj->review=$reviews;
 
+        $objJSON=json_encode($obj);
         echo $objJSON;
     ?>

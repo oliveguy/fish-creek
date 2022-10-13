@@ -1,7 +1,7 @@
 // Welcome Modal
-// setTimeout(()=>{
-//     showModal('#welcomeModal', 'flex');
-// }, 2000)
+setTimeout(()=>{
+    showModal('#welcomeModal', 'flex');
+}, 2000)
 
 closeWelcome.addEventListener('click',()=>{
     document.querySelector('#welcomeModal').style.display = "none";

@@ -12,6 +12,6 @@ include('db_connection.php');
 
         $objJSON=json_encode($obj_review);
 
-        echo $objJSON;
     }
+    echo $objJSON;
 ?>
