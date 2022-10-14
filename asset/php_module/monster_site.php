@@ -20,6 +20,10 @@ include("db_connection.php");
         $obj->siteIMG=$row['site_img'];
         $obj->activity=$row['site_activity'];
         $obj->facilities=$row['site_facilities'];
+        
+        $obj->parking1=$row['site_parking_1'];
+        $obj->parking2=$row['site_parking_2'];
+        $obj->parking3=$row['site_parking_3'];
 
         // review
             // $query = "SELECT * FROM review WHERE site_id=$id_r";

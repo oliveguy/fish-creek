@@ -32,7 +32,7 @@ include('asset/php_module/db_connection.php');
         <!-- Aside Bar Start -->
         <div id="sidebarTrigger">
             <a href="#"><img src="asset/images/hamburger.svg" alt="hamburger menu" width="55" height="55" id="hamburgerMenu"></a>
-            <a href="#"><img src="asset/images/logo_color.svg" alt="logo" width="300" height="auto" id="logo_img" class="logo"></a>
+            <a href="index.php"><img src="asset/images/logo_color.svg" alt="logo" width="300" height="auto" id="logo_img" class="logo"></a>
         </div>
         <nav id="sideBar">
             <ul id="sidebar_top">
@@ -1159,8 +1159,9 @@ include('asset/php_module/db_connection.php');
                         </figure>
                     </div>
                 <h3 class="z-parkinglots">Parking Lots</h3>
-                    <button class="z-lotbutton">Parking Lot</button>
-                    <button class="z-lotbutton">Parking Lot</button>
+					<ul id="parkingAll">
+
+					</ul>
                 <h3 class="z-reviews">Reviews</h3>
                 <ul>
 					<?php 
