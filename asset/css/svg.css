@@ -7,7 +7,7 @@
     filter:none;
 }
 g.Parking_x5F_icon, g.mon, g.road_for_car, g.trails,g.river{
-    filter:grayscale();
+    /* filter:grayscale(); */
     transition: all .5s;
 }
 .monster_svg{

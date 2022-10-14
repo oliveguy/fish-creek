@@ -96,7 +96,6 @@ for(let i=0;i<monsters.length;i++){
                 document.querySelectorAll(".z-img")[0].src ="asset/images/monster/"+data.monImg
                 document.querySelectorAll(".z-img")[0].alt = data.monName;
                 document.querySelectorAll(".z-mon_name")[0].innerHTML = data.monName;
-                // document.querySelectorAll(".z-monstername")[0].innerHTML = data.monName;
                 document.querySelectorAll(".z-monsterdesc")[0].innerHTML = data.monDesc;
                 document.querySelectorAll(".z-locationname")[0].innerHTML = data.siteName;
                 document.querySelectorAll(".z-locationdesc")[0].innerHTML = data.siteDesc;
