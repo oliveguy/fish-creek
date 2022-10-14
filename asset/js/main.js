@@ -100,34 +100,40 @@ for(let i=0;i<monsters.length;i++){
                 document.querySelectorAll(".z-monsterdesc")[0].innerHTML = data.monDesc;
                 document.querySelectorAll(".z-locationname")[0].innerHTML = data.siteName;
                 document.querySelectorAll(".z-locationdesc")[0].innerHTML = data.siteDesc;
-                // Parking Lot Info
+                // Parking Lot git addInfo
                 let parkingdata = [data.parking1,data.parking2,data.parking3];
                 let removelist = document.querySelectorAll('.parkinglistup');
-                for(let i=0;i<removelist.length;i++){
-                    parkingAll.removeChild(removelist[i]);
-                }
-                if(parkingdata[0]){
-                    parkingLot = document.createElement('li');
-                    parkingLot.id = "parkinglist";
-                    parkingLot.classList.add('parkinglistup');
-                    parkingAll.appendChild(parkingLot);
-                    parkinglist.innerHTML = parkingdata[0]
-                }
-                if(parkingdata[1]){
-                    parkingLot1 = document.createElement('li');
-                    parkingLot1.id = "parkinglist2";
-                    parkingLot1.classList.add('parkinglistup');
-                    parkingAll.appendChild(parkingLot1);
-                    parkinglist2.innerHTML = parkingdata[1]
-                }
-                if(parkingdata[2]){
-                    parkingLot2 = document.createElement('li');
-                    parkingLot2.id = "parkinglist3";
-                    parkingLot2.classList.add('parkinglistup');
-                    parkingAll.appendChild(parkingLot2);
-                    parkinglist3.innerHTML = parkingdata[2]
-                }
+                    for(let i=0;i<removelist.length;i++){
+                        parkingAll.removeChild(removelist[i]);
+                    }
+                    if(parkingdata[0]){
+                        parkingLot = document.createElement('li');
+                        parkingLot.id = "parkinglist";
+                        parkingLot.classList.add('parkinglistup');
+                        parkingAll.appendChild(parkingLot);
+                        parkinglist.innerHTML = parkingdata[0]
+                    }
+                    if(parkingdata[1]){
+                        parkingLot1 = document.createElement('li');
+                        parkingLot1.id = "parkinglist2";
+                        parkingLot1.classList.add('parkinglistup');
+                        parkingAll.appendChild(parkingLot1);
+                        parkinglist2.innerHTML = parkingdata[1]
+                    }
+                    if(parkingdata[2]){
+                        parkingLot2 = document.createElement('li');
+                        parkingLot2.id = "parkinglist3";
+                        parkingLot2.classList.add('parkinglistup');
+                        parkingAll.appendChild(parkingLot2);
+                        parkinglist3.innerHTML = parkingdata[2]
+                    }
 
+                // Photos
+                let photos = [data.pic1, data.pic2];
+                siteimg1.src = "asset/images/photos/"+photos[0];
+                siteimg1.alt = data.siteName;
+                siteimg2.src = "asset/images/photos/"+photos[1];
+                siteimg2.alt = data.siteName;
                 // activities
                 // Review
                     // for(let r=0;r<data.review.length;r++){

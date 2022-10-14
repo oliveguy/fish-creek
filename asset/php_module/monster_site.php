@@ -24,6 +24,10 @@ include("db_connection.php");
         $obj->parking1=$row['site_parking_1'];
         $obj->parking2=$row['site_parking_2'];
         $obj->parking3=$row['site_parking_3'];
+        
+        $obj->pic1=$row['img1'];
+        $obj->pic2=$row['img2'];
+
 
         // review
             // $query = "SELECT * FROM review WHERE site_id=$id_r";

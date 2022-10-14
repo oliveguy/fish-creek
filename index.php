@@ -1148,13 +1148,15 @@ include('asset/php_module/db_connection.php');
             <div class="containerScroll">
                 <!-- <h3 class="z-monstername">Cryptid Name</h3> -->
                     <p class="z-monsterdesc">This paragraph will provide a brief description of the cryptid's behaviour, location, recent sightings, physical appearance, and any other relevant information.</p>
-                    <div  class="z-img"><img class="z-img" src="#" alt="location pics"></div>
+                    <div class="z-img">
+						<img class="z-img-pic" id="siteimg1" src="#" width="300" height="auto" alt="location pics">
+						<img class="z-img-pic" id="siteimg2" src="#" width="300" height="auto" alt="location pics">
+					</div>
                 <h3 class="z-locationname">Location Name</h3>
                     <p class="z-locationdesc">This paragraph will provide a brief description of the point of interest labelled on the map.</p>
                 <h3 class="z-activities-h">Activities</h3>
                     <div class="z-activities">
                         <figure class="z-icon">
-                            <img src="#">
                             <figcaption>Activity</figcaption>
                         </figure>
                     </div>

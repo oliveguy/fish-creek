@@ -113,6 +113,11 @@ div.containerScroll::-webkit-scrollbar {
     justify-content:center;
     align-items:center;
 }
+img.z-img-pic{
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+}
 div.z-activities{
     display: flex;
     justify-content: center;
