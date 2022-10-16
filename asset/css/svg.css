@@ -17,6 +17,11 @@ g.Parking_x5F_icon, g.mon, g.road_for_car, g.trails,g.river{
 .monster_svg:hover{
     cursor: pointer;
 }
+.monShow{
+    filter: none;
+    transform: scale(1.2);
+    transform-origin: 542px 960px;
+}
 @media screen and (max-width:825px){
     #bg_svg{
         height: 100%;

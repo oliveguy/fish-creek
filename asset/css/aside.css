@@ -129,9 +129,14 @@ li.subList > div.monster_siteContainer{
     display:flex;
     flex-direction: column;
     margin-left: .5rem;
+    color:var(--text_d);
 }
 div.monster_siteContainer > a:hover{
     color:var(--text_d);
+}
+.checkedMonster{
+    background-color: var(--main_btn);
+    color: var(--text_d);
 }
 span.siteName{
     font-size: .75rem;

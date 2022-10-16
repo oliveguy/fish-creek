@@ -23,6 +23,16 @@ for(let i=0 ; i<menus.length ; i++){
     })
 }
 // --------------- //
+// MONSTER MENU IN SIDE BAR
+let monsterMenu = document.querySelectorAll('.monster_listing');
+for(let i =0;i<monsterMenu.length;i++){
+    let monstersOnMap = document.querySelectorAll('.monster_svg')
+    monsterMenu[i].addEventListener('click',()=>{
+        monstersOnMap[i].classList.toggle('monShow');
+        monsterMenu[i].classList.toggle('checkedMonster');
+    })
+    }
+
 // LEGEND PANEL //
 var legendControl = document.getElementsByClassName('legendctr')[0];
 var legendPanel = document.getElementsByClassName('legend')[0];
