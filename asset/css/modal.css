@@ -1,5 +1,5 @@
 /* WELCOME MODAL */
-#welcomeModal{
+#welcomeModal, #attributionModal{
     display:none;
     flex-direction:column;
     position: absolute;
@@ -194,6 +194,22 @@ form.review_post{
 .z-lotbutton{
     width:95%;
 }
+
+#attributionModal > ul{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+#attributionModal > ul > li{
+    margin: 0.5rem, 0;
+    list-style-type:square;
+    font-size: .8rem;
+    font-weight: lighter;
+}
+#attributionModal > ul > li > a{
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
 @media screen and (max-width:650px){
     #welcomeModal{
         display:none;
@@ -212,16 +228,6 @@ form.review_post{
     }
 }
 @media screen and (max-width:400px){
-
-    /* .z-monstermodal{
-        display:flex;
-        display:none;
-        flex-direction: column;
-        background-color: var(--window_bg);
-        color: var(--text_l);
-        width:35%;
-        padding:1rem;
-    } */
     .z-img{
         display:flex;
         justify-content:center;
@@ -267,15 +273,6 @@ form.review_post{
         color: var(--text_l);
         cursor:pointer;
     }
-    /* .z-monstermodal{
-        display:flex;
-    }
-    .z-monstermodal{
-        background-color: var(--window_bg);
-        color: var(--text_l);
-        width:90%;
-        padding:1rem;
-    } */
     .z-img{
         display:flex;
         justify-content:center;
@@ -289,5 +286,19 @@ form.review_post{
     }
     .z-lotbutton{
         width:95%;
+    }
+    #welcomeModal{
+        max-height: 100vh;
+        overflow-y: auto;
+        top: 1rem;
+        bottom: 1rem;
+    }
+    #welcomeLogo{
+        width:100px;
+        height:100px;
+    }
+    #welcomeModal > p{
+        margin: .25rem auto;
+        font-size: .8rem;
     }
 }

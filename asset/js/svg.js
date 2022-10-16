@@ -10,6 +10,9 @@ var mouseDown = false;
 bg_svg.addEventListener("mousemove", mousemove);
 bg_svg.addEventListener("mousedown", mousedown);
 bg_svg.addEventListener("wheel", wheel);
+zoomIn.addEventListener('click', zoomClickIn)
+zoomOut.addEventListener('click', zoomClickOut)
+
 
 function mousedown(e) {
   mouseStartPosition.x = e.pageX;
@@ -74,7 +77,39 @@ function mouseup(e) {
 
 function wheel(e) {
   var scale = (e.deltaY < 0) ? 0.8 : 1.2;
+  if ((viewboxScale * scale < 8.) && (viewboxScale * scale > 1./256.))
+  {  
+    var mpos = {x: mousePosition.x * viewboxScale, y: mousePosition.y * viewboxScale};
+    var vpos = {x: viewboxPosition.x, y: viewboxPosition.y};
+    var cpos = {x: mpos.x + vpos.x, y: mpos.y + vpos.y};
+
+    viewboxPosition.x = (viewboxPosition.x - cpos.x) * scale + cpos.x;
+    viewboxPosition.y = (viewboxPosition.y - cpos.y) * scale + cpos.y;
+    viewboxScale *= scale;
   
+    setviewbox();
+  }
+}
+
+function zoomClickIn(e){
+  e.preventDefault;
+  scale = 0.8;
+  if ((viewboxScale * scale < 8.) && (viewboxScale * scale > 1./256.))
+  {  
+    var mpos = {x: mousePosition.x * viewboxScale, y: mousePosition.y * viewboxScale};
+    var vpos = {x: viewboxPosition.x, y: viewboxPosition.y};
+    var cpos = {x: mpos.x + vpos.x, y: mpos.y + vpos.y};
+
+    viewboxPosition.x = (viewboxPosition.x - cpos.x) * scale + cpos.x;
+    viewboxPosition.y = (viewboxPosition.y - cpos.y) * scale + cpos.y;
+    viewboxScale *= scale;
+  
+    setviewbox();
+  }
+}
+function zoomClickOut(e){
+  e.preventDefault;
+  scale = 1.2;
   if ((viewboxScale * scale < 8.) && (viewboxScale * scale > 1./256.))
   {  
     var mpos = {x: mousePosition.x * viewboxScale, y: mousePosition.y * viewboxScale};

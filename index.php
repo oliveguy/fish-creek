@@ -25,8 +25,8 @@ include('asset/php_module/db_connection.php');
             <h2>Fish Creek Provincial Park</h2>
             <h3>Cryptid Directory and Map</h3>
             <p class="z-welcome">Welcome! Thank you for visiting our interactive map of Fish Creek Provincial Park. This map will direct you to the most intriguing points of interest in Canada's second largest urban park. There are also a number of mythical creatures rumoured to make their homes in the park. This guide will provide you with information on these creatures and where to potentially find them.</p>
-            <p class="z-welcome">The map features many different icons which represent the featured areas as well as the various amenities available to visitors of the park. Touch or click on any of these icons to display more information on their coresponding locations, and to highlight the available routes you can take should you decide to visit. The legend on the right hand side will detail exactly what each particular icon represents, and the pop-out menu on the left will provide a full directory of the various cryptids which have been reported in the area.</p>
-            <p>We hope you enjoy your visit to Fish Creek Park, and that this map provides you with ample information to find your way around, as well as stay safe in the event that you encounter one of these creatures. Feel free to leave a comment detailing your experience at these locations, and if you happen to snap a photo of one of the mythical beasts, our team would love to see them. Have fun!</p>
+            <p class="z-welcome">The map features many different icons which represent the featured areas. Touch or click on any of these icons to display more information on their coresponding locations. The legend on the right hand side will detail exactly what each particular icon represents, and the pop-out menu on the left will provide a full directory of the cryptids which have been reported in the area.</p>
+            <p>We hope you enjoy your visit to Fish Creek Park, and that this map provides you with ample information to find your way around, as well as stay safe in the event that you encounter one of these creatures. Feel free to leave a comment detailing your experience at these locations, and have fun!</p>
             <button id="closeWelcome">Go to map</button>
         </div>
         <!-- Aside Bar Start -->
@@ -106,6 +106,36 @@ include('asset/php_module/db_connection.php');
                                 <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
                             </div>
                         </li>
+                        <li class="subList parking">
+                            <div class="monster_siteContainer">
+                                <a href="#"><span class="subTitleHeading">Batking</span></a>
+                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
+                            </div>
+                        </li>
+                        <li class="subList parking">
+                            <div class="monster_siteContainer">
+                                <a href="#"><span class="subTitleHeading">Batking</span></a>
+                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
+                            </div>
+                        </li>
+                        <li class="subList parking">
+                            <div class="monster_siteContainer">
+                                <a href="#"><span class="subTitleHeading">Batking</span></a>
+                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
+                            </div>
+                        </li>
+                        <li class="subList parking">
+                            <div class="monster_siteContainer">
+                                <a href="#"><span class="subTitleHeading">Batking</span></a>
+                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
+                            </div>
+                        </li>
+                        <li class="subList parking">
+                            <div class="monster_siteContainer">
+                                <a href="#"><span class="subTitleHeading">Batking</span></a>
+                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
+                            </div>
+                        </li>
                         <!-- ---------------- -->
                     </ul>
                 </li>
@@ -128,10 +158,10 @@ include('asset/php_module/db_connection.php');
             </ul>
         </aside>
         <aside class="bottomControl">
-            <a href="#" class="zoomctr"><img src="asset/images/logo_color_squre.svg" width="35" height="35" alt="fishcreek_logo"></a>
-            <a href="#" class="zoomctr"><img src="asset/images/zoom_in.svg" width="35" height="35" alt="zoom_in"></a>
-            <a href="#" class="zoomctr"><img src="asset/images/zoom_out.svg" width="35" height="35" alt="zoom_out"></a>
-            <a href="#" class="zoomctr"><img src="asset/images/more.svg" width="35" height="35" alt="more_icon"></a>
+            <a href="#" class="zoomctr" id="welcomeOpen"><img src="asset/images/logo_color_squre.svg" width="35" height="35" alt="fishcreek_logo"></a>
+            <a href="#" class="zoomctr" id="zoomIn"><img src="asset/images/zoom_in.svg" width="35" height="35" alt="zoom_in"></a>
+            <a href="#" class="zoomctr" id="zoomOut"><img src="asset/images/zoom_out.svg" width="35" height="35" alt="zoom_out"></a>
+            <a href="#" class="zoomctr" id="attribution"><img src="asset/images/more.svg" width="35" height="35" alt="more_icon"></a>
         </aside>
         <!-- Aside Bar End -->
         <div id="blackBG"></div>
@@ -1193,6 +1223,34 @@ include('asset/php_module/db_connection.php');
                 </ul>
             </div>
         </div>
+		<div id="attributionModal">
+			<a href="#" id="attributionclose">
+				<span></span>
+				<img src="asset/images/x_button.svg" alt="close button" width="20" height="20" class="closeBtnImg" id=atriClose>
+			</a>
+			<h2>Fish Creek Provincial Park</h2>
+			<h3>MMDA 300 - Assignment #1: Interactive Map</h3>
+			
+			<p>"Cryptid images" created by Zachary Howell using DALL-E 2 Open AI image generation from text prompt (<a href="labs.openai.com">labs.openai.com</a>)</p>
+			
+			<h4>References:</h4>
+			<ul>
+				<li><a href="https://www.albertaparks.ca/parks/kananaskis/fish-creek-pp/">"Fish Creek Park"</a> by Government of Alberta. Non-Commercial Reproduction.</li> 
+				<li><a href="https://bvrrestaurant.com/">"Bow Valley Ranche Restaurant"</a> by Bow Valley Ranche Restaurant.</li>
+				<li><a href="https://bvrrestaurant.com/annies/">"Annie's Caf&#233;"</a> by Bow Valley Ranche Restaurant.</li>
+				<li><a href="https://foodiesinthepark.com/">"Foodies in the Park"</a> by Foodies in the park.</li>
+				<li><a href="https://albertaparks.ca/parks/kananaskis/fish-creek-pp/information-facilities/park-contacts/bow-valley-ranch-visitor-centre/">"Bow Valley Ranch Visitor Centre"</a> by Government of Alberta. Non-Commercial Reproduction.</li>
+				<li><a href="https://www.albertaparks.ca/parks/kananaskis/fish-creek-pp/information-facilities/special-facilities/sikome-aquatic-facility/">"Sikome Aquatic Facility"</a> by Government of Alberta. Non-Commercial Reproduction.</li>
+				<li><a href="https://www.albertaparks.ca/parks/kananaskis/fish-creek-pp/information-facilities/day-use/boat-launch/">"Boat Launch Day Use"</a> by Government of Alberta. Non-Commercial Reproduction.</li>
+				<li><a href="https://www.cmbalink.com/calgary-skills-parks/fish-creek-skills-park/">"Fish Creek Skills Park"</a> by CMBA - Calgary Mountain Bike Alliance.</li>
+				<li><a href="https://www.albertaparks.ca/parks/kananaskis/fish-creek-pp/information-facilities/day-use/hulls-wood/">"Hulls Wood Day Use"</a> by Government of Alberta. Non-Commercial Reproduction.</li>
+				<li><a href="https://www.mckenziemeadows.com/">"McKenzie Meadows Golf Club"</a> by McKenzie Meadows Golf Club.</li>
+				<li><a href="https://www.bluedevilgolf.com/">"Blue Devil Golf Club"</a> by Blue Devil Golf Club.</li>
+				<li><a href="https://www.google.ca/maps/place/Fish+Creek+Provincial+Park/@50.9113576,-114.0422374,13z/data=!4m5!3m4!1s0x53717685a73ceb1d:0xfa8f5c2c1ac36f13!8m2!3d50.9147128!4d-114.0107697">"Fish Creek Map"</a> by Google.</li>
+				<li><a href="https://dashingdad.ca/things-to-do-with-your-kids-fish-creek-park-ice-caves/">"Things to do with your kids: Fish Creek Park Ice Cave"</a> by Dashing Dad. All Rights Reserved.</li>
+			</ul>   
+        	<small>&copy; All Other Works Are Original</small>
+		</div>
     </main>
     <script src="asset/js/main.js"></script>
     <script src="asset/js/svg.js"></script>

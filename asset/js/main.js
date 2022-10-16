@@ -39,7 +39,7 @@ var legendPanel = document.getElementsByClassName('legend')[0];
 legendControl.addEventListener('click',()=>{
     legendControl.classList.toggle('rotateToLeft');
     if(legendPanel.style.right == "0px"){
-        legendPanel.style.right = "-118px";
+        legendPanel.style.right = "-120px";
     } else {
         legendPanel.style.right = "0px";
     }
@@ -52,7 +52,7 @@ let legendslide = document.querySelector('.legend');
         document.querySelector('.legend').style.opacity = 1;
     })
     legendslide.addEventListener('mouseout',(e)=>{
-        legendPanel.style.right = "-118px";
+        legendPanel.style.right = "-120px";
         legendControl.classList.remove('rotateToLeft');
         document.querySelector('.legend').style.opacity = 0.9;
     })

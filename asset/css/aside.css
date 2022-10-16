@@ -42,6 +42,27 @@ nav#sideBar{
     background-color: var(--main_bg_op);
     z-index: 30;
     transition: all .5s;
+    overflow-y: scroll;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color:transparent;
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
 }
 ul#sidebar_top{
     display:flex;
@@ -159,7 +180,7 @@ p#trademark{
 aside.legend{
     position:absolute;
     top:1rem;
-    right:-118px;
+    right:-120px;
     padding:1rem;
     background-color: var(--main_bg_wh);
     border-top-left-radius: 25px;
