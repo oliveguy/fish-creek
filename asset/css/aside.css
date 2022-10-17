@@ -136,7 +136,7 @@ li.subList{
     padding: 0 1rem;
 }
 li.parking{
-    padding:0;
+    padding:0 1rem;
 }
 li.subList:hover{
     background-color: var(--main_btn);

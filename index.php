@@ -88,54 +88,20 @@ include('asset/php_module/db_connection.php');
                 <li class="sidebaritems"><span class="sideBar_subheading">Parking Lot<img src="asset/images/dropdown.svg" alt="" width="15" height="15" class="dropdownArrow"></span>
                     <ul class="hidden">
                         <!-- In loop from DB -->
-                        <li class="subList parking">
-                            <div class="monster_siteContainer">
-                                <a href="#"><span class="subTitleHeading">Batking</span></a>
-                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
-                            </div>
-                        </li>
-                        <li class="subList parking">
-                            <div class="monster_siteContainer">
-                                <a href="#"><span class="subTitleHeading">Batking</span></a>
-                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
-                            </div>
-                        </li>
-                        <li class="subList parking">
-                            <div class="monster_siteContainer">
-                                <a href="#"><span class="subTitleHeading">Batking</span></a>
-                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
-                            </div>
-                        </li>
-                        <li class="subList parking">
-                            <div class="monster_siteContainer">
-                                <a href="#"><span class="subTitleHeading">Batking</span></a>
-                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
-                            </div>
-                        </li>
-                        <li class="subList parking">
-                            <div class="monster_siteContainer">
-                                <a href="#"><span class="subTitleHeading">Batking</span></a>
-                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
-                            </div>
-                        </li>
-                        <li class="subList parking">
-                            <div class="monster_siteContainer">
-                                <a href="#"><span class="subTitleHeading">Batking</span></a>
-                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
-                            </div>
-                        </li>
-                        <li class="subList parking">
-                            <div class="monster_siteContainer">
-                                <a href="#"><span class="subTitleHeading">Batking</span></a>
-                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
-                            </div>
-                        </li>
-                        <li class="subList parking">
-                            <div class="monster_siteContainer">
-                                <a href="#"><span class="subTitleHeading">Batking</span></a>
-                                <a href="#"><span class="siteName">Blue Devil Golf club</span></a>
-                            </div>
-                        </li>
+						<?php
+							$query = "SELECT site_name FROM parking";
+							$sql = mysqli_query($connection,$query);
+							while($row = mysqli_fetch_array($sql)){ echo '
+								<li class="subList parking">
+									<a href="#"><img src="asset/images/legend_icon/parking.svg" width="40" height="40" alt="parking lot icon"class="monsterIcon"></a>
+									<div class="monster_siteContainer">
+										<a href="#"><span class="subTitleHeading">'.$row['site_name'].'</span></a>
+										<a href="#"><span class="siteName">Parking Lot</span></a>
+									</div>
+								</li>
+								';
+							}
+						?>
                         <!-- ---------------- -->
                     </ul>
                 </li>
@@ -557,65 +523,65 @@ include('asset/php_module/db_connection.php');
 						s-20.5-40.9-24.6-55.7s-12.6-48.9-10.7-60.3c1.9-11.4,16.7-42.8,16.1-52.3s0.6-20.7-1.2-24.3"/>
 				</g>
 				<g class="Parking_x5F_icon">
-					<g id="mountain_bike_park">
+					<g id="mountain_bike_park" class="parkG">
 						<circle class="st15" cx="706.1" cy="812.6" r="20"/>
 						<path class="st16" d="M698.7,799.9h2.7v27h-2.7V799.9z M700.6,813.9h8.6c1.1,0,2-0.2,2.8-0.7c0.8-0.5,1.4-1.2,1.9-2
 							c0.4-0.9,0.7-1.9,0.7-3c0-1.1-0.2-2.2-0.7-3c-0.4-0.9-1.1-1.5-1.9-2c-0.8-0.5-1.7-0.7-2.8-0.7h-8.6v-2.5h8.5c1.6,0,3,0.3,4.3,1
 							c1.2,0.7,2.2,1.6,2.8,2.9c0.7,1.2,1,2.7,1,4.3c0,1.6-0.3,3.1-1,4.3c-0.7,1.2-1.6,2.2-2.8,2.9c-1.2,0.7-2.6,1-4.3,1h-8.5V813.9
 							L700.6,813.9z"/>
 					</g>
-					<g id="mallard_point">
+					<g id="mallard_point" class="parkG">
 						<circle class="st15" cx="529.3" cy="422.3" r="20"/>
 						<path class="st16" d="M521.9,409.6h2.7v27h-2.7V409.6z M523.9,423.7h8.6c1.1,0,2-0.2,2.8-0.7s1.4-1.2,1.9-2c0.4-0.9,0.7-1.9,0.7-3
 							s-0.2-2.2-0.7-3c-0.4-0.9-1.1-1.5-1.9-2s-1.7-0.7-2.8-0.7h-8.6v-2.5h8.5c1.6,0,3,0.3,4.3,1c1.2,0.7,2.2,1.6,2.8,2.9
 							c0.7,1.2,1,2.7,1,4.3c0,1.6-0.3,3.1-1,4.3c-0.7,1.2-1.6,2.2-2.8,2.9c-1.2,0.7-2.6,1-4.3,1h-8.5V423.7L523.9,423.7z"/>
 					</g>
-					<g id="loop">
+					<g id="loop" class="parkG">
 						<circle class="st15" cx="567.2" cy="356.3" r="20"/>
 						<path class="st16" d="M559.9,343.6h2.7v27h-2.7V343.6z M561.8,357.6h8.6c1.1,0,2-0.2,2.8-0.7s1.4-1.2,1.9-2c0.4-0.9,0.7-1.9,0.7-3
 							s-0.2-2.2-0.7-3c-0.4-0.9-1.1-1.5-1.9-2s-1.7-0.7-2.8-0.7h-8.6v-2.5h8.5c1.6,0,3,0.3,4.3,1c1.2,0.7,2.2,1.6,2.8,2.9
 							c0.7,1.2,1,2.7,1,4.3s-0.3,3.1-1,4.3c-0.7,1.2-1.6,2.2-2.8,2.9c-1.2,0.7-2.6,1-4.3,1h-8.5V357.6L561.8,357.6z"/>
 					</g>
-					<g id="douglas_park">
+					<g id="douglas_park" class="parkG">
 						<circle class="st15" cx="757.1" cy="468.9" r="20"/>
 						<path class="st16" d="M749.7,456.2h2.7v27h-2.7V456.2z M751.7,470.3h8.6c1.1,0,2-0.2,2.8-0.7s1.4-1.2,1.9-2c0.4-0.9,0.7-1.9,0.7-3
 							s-0.2-2.2-0.7-3c-0.4-0.9-1.1-1.5-1.9-2s-1.7-0.7-2.8-0.7h-8.6v-2.5h8.5c1.6,0,3,0.3,4.3,1c1.2,0.7,2.2,1.6,2.8,2.9
 							c0.7,1.2,1,2.7,1,4.3s-0.3,3.1-1,4.3c-0.7,1.2-1.6,2.2-2.8,2.9c-1.2,0.7-2.6,1-4.3,1h-8.5V470.3L751.7,470.3z"/>
 					</g>
-					<g id="south_fish_creek_bridge">
+					<g id="south_fish_creek_bridge" class="parkG">
 						<circle class="st15" cx="603.6" cy="924.4" r="20"/>
 						<path class="st16" d="M596.2,911.7h2.7v27h-2.7V911.7z M598.2,925.8h8.6c1.1,0,2-0.2,2.8-0.7c0.8-0.5,1.4-1.2,1.9-2
 							c0.4-0.9,0.7-1.9,0.7-3s-0.2-2.2-0.7-3c-0.4-0.9-1.1-1.5-1.9-2c-0.8-0.5-1.7-0.7-2.8-0.7h-8.6v-2.5h8.5c1.6,0,3,0.3,4.3,1
 							s2.2,1.6,2.8,2.9c0.7,1.2,1,2.7,1,4.3c0,1.6-0.3,3.1-1,4.3c-0.7,1.2-1.6,2.2-2.8,2.9c-1.2,0.7-2.6,1-4.3,1h-8.5V925.8L598.2,925.8
 							z"/>
 					</g>
-					<g id="sikome">
+					<g id="sikome" class="parkG">
 						<circle class="st15" cx="445.2" cy="1238.9" r="20"/>
 						<path class="st16" d="M437.8,1226.1h2.7v27h-2.7V1226.1z M439.8,1240.2h8.6c1.1,0,2-0.2,2.8-0.7c0.8-0.5,1.4-1.2,1.9-2
 							c0.4-0.9,0.7-1.9,0.7-3c0-1.1-0.2-2.2-0.7-3c-0.4-0.9-1.1-1.5-1.9-2c-0.8-0.5-1.7-0.7-2.8-0.7h-8.6v-2.5h8.5c1.6,0,3,0.3,4.3,1
 							c1.2,0.7,2.2,1.6,2.8,2.9c0.7,1.2,1,2.7,1,4.3s-0.3,3.1-1,4.3c-0.7,1.2-1.6,2.2-2.8,2.9c-1.2,0.7-2.6,1-4.3,1h-8.5V1240.2
 							L439.8,1240.2z"/>
 					</g>
-					<g id="fishcreekboatramp">
+					<g id="fishcreekboatramp" class="parkG">
 						<circle class="st15" cx="522.6" cy="1249.4" r="20"/>
 						<path class="st16" d="M515.2,1236.7h2.7v27h-2.7V1236.7z M517.1,1250.7h8.6c1.1,0,2-0.2,2.8-0.7s1.4-1.2,1.9-2s0.7-1.9,0.7-3
 							s-0.2-2.2-0.7-3c-0.4-0.9-1.1-1.5-1.9-2c-0.8-0.5-1.7-0.7-2.8-0.7h-8.6v-2.5h8.5c1.6,0,3,0.3,4.3,1s2.2,1.6,2.8,2.9
 							c0.7,1.2,1,2.7,1,4.3s-0.3,3.1-1,4.3c-0.7,1.2-1.6,2.2-2.8,2.9c-1.2,0.7-2.6,1-4.3,1h-8.5V1250.7L517.1,1250.7z"/>
 					</g>
-					<g id="blue_devil">
+					<g id="blue_devil" class="parkG">
 						<circle class="st15" cx="589.8" cy="1460.3" r="20"/>
 						<path class="st16" d="M582.5,1447.6h2.7v27h-2.7V1447.6z M584.4,1461.7h8.6c1.1,0,2-0.2,2.8-0.7s1.4-1.2,1.9-2
 							c0.4-0.9,0.7-1.9,0.7-3c0-1.1-0.2-2.2-0.7-3c-0.4-0.9-1.1-1.5-1.9-2s-1.7-0.7-2.8-0.7h-8.6v-2.5h8.5c1.6,0,3,0.3,4.3,1
 							s2.2,1.6,2.8,2.9c0.7,1.2,1,2.7,1,4.3c0,1.6-0.3,3.1-1,4.3c-0.7,1.2-1.6,2.2-2.8,2.9c-1.2,0.7-2.6,1-4.3,1h-8.5V1461.7
 							L584.4,1461.7z"/>
 					</g>
-					<g id="meckenzie">
+					<g id="meckenzie" class="parkG">
 						<circle class="st15" cx="685.6" cy="1187.6" r="20"/>
 						<path class="st16" d="M678.2,1174.9h2.7v27h-2.7V1174.9z M680.2,1189h8.6c1.1,0,2-0.2,2.8-0.7s1.4-1.2,1.9-2s0.7-1.9,0.7-3
 							s-0.2-2.2-0.7-3c-0.4-0.9-1.1-1.5-1.9-2c-0.8-0.5-1.7-0.7-2.8-0.7h-8.6v-2.5h8.5c1.6,0,3,0.3,4.3,1s2.2,1.6,2.8,2.9
 							c0.7,1.2,1,2.7,1,4.3s-0.3,3.1-1,4.3c-0.7,1.2-1.6,2.2-2.8,2.9c-1.2,0.7-2.6,1-4.3,1h-8.5V1189L680.2,1189z"/>
 					</g>
-					<g id="visitor_center">
+					<g id="visitor_center" class="parkG">
 						<circle class="st15" cx="434.4" cy="955.8" r="20"/>
 						<path class="st16" d="M427,943.1h2.7v27H427V943.1z M429,957.2h8.6c1.1,0,2-0.2,2.8-0.7c0.8-0.5,1.4-1.2,1.9-2
 							c0.4-0.9,0.7-1.9,0.7-3s-0.2-2.2-0.7-3c-0.4-0.9-1.1-1.5-1.9-2c-0.8-0.5-1.7-0.7-2.8-0.7H429v-2.5h8.5c1.6,0,3,0.3,4.3,1

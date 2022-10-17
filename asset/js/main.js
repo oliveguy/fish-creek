@@ -31,7 +31,16 @@ for(let i =0;i<monsterMenu.length;i++){
         monstersOnMap[i].classList.toggle('monShow');
         monsterMenu[i].classList.toggle('checkedMonster');
     })
-    }
+}
+// PARKING MENU IN SIDE BAR
+let parkingMenu = document.querySelectorAll('.parking');
+for(let i =0;i<parkingMenu.length;i++){
+    let parkOnMap = document.querySelectorAll('.parkG')
+    parkingMenu[i].addEventListener('click',()=>{
+        parkOnMap[i].classList.toggle('monShow');
+        parkingMenu[i].classList.toggle('checkedMonster');
+    })
+}
 
 // LEGEND PANEL //
 var legendControl = document.getElementsByClassName('legendctr')[0];
@@ -146,20 +155,24 @@ for(let i=0;i<monsters.length;i++){
                 siteimg2.src = "asset/images/photos/"+photos[1];
                 siteimg2.alt = data.siteName;
             // REVIEW
-                // INIT LISTED ITEMS
-                let discard = document.querySelectorAll(".z-reviewer");
-                for(let i=0;i<discard.length;i++){
-                    discard[i].remove()
-                }
-                //  AJAX INSERTATION
+            let discard = document.querySelectorAll(".z-reviewer");
+            for(let i=0;i<discard.length;i++){
+                discard[i].remove()
+                // document.querySelectorAll(".z-user")[i].innerHTML = "";
+                // document.querySelectorAll(".z-review")[i].innerHTML = "";
+                // document.querySelectorAll(".z-user_time")[i].innerHTML = "";
+            }
                 for(const inner in data.reviewPost){
+                    // console.log(data.reviewPost[inner].author+" / "+data.reviewPost[inner].content+" / "+data.reviewPost[inner].date);
                     // CREATE LI ELEMENT
                     let addList = document.createElement('li');
                     addList.classList.add('z-reviewer');
                     addList.id = "list_"+data.reviewPost[inner].date;
                     reviewListing.prepend(addList);
+
                     let listID = document.getElementById("list_"+data.reviewPost[inner].date);
                     
+
                     // INSERT USER NAME
                     let p_user = document.createElement('p');
                     p_user.classList.add('z-user');

@@ -17,6 +17,9 @@ g.Parking_x5F_icon, g.mon, g.road_for_car, g.trails,g.river{
 .monster_svg:hover{
     cursor: pointer;
 }
+.parkG{
+    transition: all .5s;
+}
 .monShow{
     filter: none;
     transform: scale(1.2);
