@@ -1195,20 +1195,12 @@ include('asset/php_module/db_connection.php');
 
 					</ul>
                 <h3 class="z-reviews">Reviews</h3>
-                <ul>
-					<?php 
-						$query = "SELECT * FROM review WHERE site_id=1";
-						$sql = mysqli_query($connection,$query);
-						while($row = mysqli_fetch_array($sql)){
-							echo '
-							<li class="z-reviewer">
-								<p class="z-user">'.$row['content_author'].'</p>
-								<p class="z-review">'.$row['content_content'].'</p>
-								<p class="z-review_time">'.$row['content_date'].'</p>
-							</li>
-							';
-						}
-					?>
+                <ul id="reviewListing">
+					<li class="z-reviewer">
+						<p class="z-user"></p>
+						<p class="z-review"></p>
+						<p class="z-review_time"></p>
+					</li>
                     <li>
                         <form method="post" action="#" class="review_post">
                             <label for="z-testimonial-name"></label>

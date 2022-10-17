@@ -91,6 +91,7 @@ document.querySelectorAll('.closeBtnImg_1')[0].addEventListener('click',()=>{
     modalCtr.modalClose('.z-monstermodal');
 })
 const monsters = document.querySelectorAll('.monster_svg');
+var obje ={};
 for(let i=0;i<monsters.length;i++){
     monsters[i].addEventListener('click',()=>{
         // Coloring Monter Icon
@@ -99,8 +100,9 @@ for(let i=0;i<monsters.length;i++){
         fetch("./asset/php_module/monster_site.php?id="+i)
         .then(res => res.json())
         .then(function(data){
-                // console.log(date);
-                // modal window open/close
+                // console.log(data);
+                obje = data;
+            // modal window open/close
                 modalCtr.modalOpen('flex');
             // Contents insert
                 document.querySelectorAll(".z-img")[0].src ="asset/images/monster/"+data.monImg
@@ -109,7 +111,7 @@ for(let i=0;i<monsters.length;i++){
                 document.querySelectorAll(".z-monsterdesc")[0].innerHTML = data.monDesc;
                 document.querySelectorAll(".z-locationname")[0].innerHTML = data.siteName;
                 document.querySelectorAll(".z-locationdesc")[0].innerHTML = data.siteDesc;
-                // Parking Lot git addInfo
+            // Parking Lot git addInfo
                 let parkingdata = [data.parking1,data.parking2,data.parking3];
                 let removelist = document.querySelectorAll('.parkinglistup');
                     for(let i=0;i<removelist.length;i++){
@@ -137,22 +139,55 @@ for(let i=0;i<monsters.length;i++){
                         parkinglist3.innerHTML = parkingdata[2]
                     }
 
-                // Photos
+            // Photos
                 let photos = [data.pic1, data.pic2];
                 siteimg1.src = "asset/images/photos/"+photos[0];
                 siteimg1.alt = data.siteName;
                 siteimg2.src = "asset/images/photos/"+photos[1];
                 siteimg2.alt = data.siteName;
-                // activities
-                // Review
-                    // for(let r=0;r<data.review.length;r++){
-                    //     document.querySelectorAll(".z-user")[0].innerHTML = data.review[r][0];
-                    //     document.querySelectorAll(".z-review")[0].innerHTML = data.review[r][1];
-                    //     document.querySelectorAll(".z-review_time")[0].innerHTML = data.review[r][2];
-                    // }
+            // REVIEW
+                // INIT LISTED ITEMS
+                let discard = document.querySelectorAll(".z-reviewer");
+                for(let i=0;i<discard.length;i++){
+                    discard[i].remove()
+                }
+                //  AJAX INSERTATION
+                for(const inner in data.reviewPost){
+                    // CREATE LI ELEMENT
+                    let addList = document.createElement('li');
+                    addList.classList.add('z-reviewer');
+                    addList.id = "list_"+data.reviewPost[inner].date;
+                    reviewListing.prepend(addList);
+                    let listID = document.getElementById("list_"+data.reviewPost[inner].date);
+                    
+                    // INSERT USER NAME
+                    let p_user = document.createElement('p');
+                    p_user.classList.add('z-user');
+                    p_user.id = "p_user"+data.reviewPost[inner].date;
+                    listID.appendChild(p_user);
+                    let puser = document.getElementById("p_user"+data.reviewPost[inner].date);
+                    puser.innerHTML = data.reviewPost[inner].author;
+
+                    //INSERT REVIEW CONTENT
+                    let p_review = document.createElement('p');
+                    p_review.classList.add('z-review');
+                    p_review.id = "p_content"+data.reviewPost[inner].date;
+                    listID.appendChild(p_review);
+                    let preview = document.getElementById("p_content"+data.reviewPost[inner].date);
+                    preview.innerHTML = data.reviewPost[inner].content;
+
+                    //INSERT REVIEW DATE CONTENT
+                    let p_date = document.createElement('p');
+                    p_date.classList.add('z-review_time');
+                    p_date.id = "p_date"+data.reviewPost[inner].date;
+                    listID.appendChild(p_date);
+                    let pdate = document.getElementById("p_date"+data.reviewPost[inner].date);
+                    pdate.innerHTML = data.reviewPost[inner].date;
+                }
             })
+            
         .catch(function(error){
-            console.log('fail '+error)
+            console.log(error)
         })
     })
 }

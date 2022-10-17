@@ -2,9 +2,9 @@
 include("db_connection.php");
 
     $id = $_GET['id'];
+    // $id_r = $_GET['id_review'];
 
-    // MONSTER INFO PULLING
-    $query = "SELECT * FROM monster_site WHERE id=$id"; 
+    $query = "SELECT * FROM monster_site WHERE id=$id";
     $sql = mysqli_query($connection,$query);
     $row = mysqli_fetch_array($sql);
 
@@ -28,17 +28,16 @@ include("db_connection.php");
         $obj->pic1=$row['img1'];
         $obj->pic2=$row['img2'];
 
-        // REVIEW POST INFO PULLING
-        $reviewPost1=new stdClass();
 
-        $query = "SELECT * FROM review WHERE site_id=$id";
-        $sql = mysqli_query($connection,$query);
-        while($review=mysqli_fetch_array($sql)){
-            $num = "id_".$review['id'];
-            $reviewPost1->$num=(object)['author'=>$review['content_author'],'content'=>$review['content_content'],'date'=>$review['content_date']];
-            // $reviewPost->$num=(object)['author'=>$review['content_author'],'content'=>$review['content_content'],'date'=>$review['content_date']];
-            $obj->reviewPost=$reviewPost1;
-        }
+        // review
+            // $query = "SELECT * FROM review WHERE site_id=$id_r";
+            // $sql = mysqli_query($connection,$query);
+            // $reviews = [];
+            // while($row = mysqli_fetch_array($sql)){
+            //     $each_review = [$row['content_author'],$row['content_content'],$row['content_date']];
+            //     array_push($reviews, $each_review);
+            // }
+            // $obj->review=$reviews;
 
         $objJSON=json_encode($obj);
         echo $objJSON;
