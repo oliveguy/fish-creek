@@ -1152,9 +1152,7 @@ include('asset/php_module/db_connection.php');
                     <p class="z-locationdesc">This paragraph will provide a brief description of the point of interest labelled on the map.</p>
                 <h3 class="z-activities-h">Activities</h3>
                     <div class="z-activities">
-                        <figure class="z-icon">
-                            <figcaption>Activity</figcaption>
-                        </figure>
+						<p class="activity"></p>
                     </div>
                 <h3 class="z-parkinglots">Parking Lots</h3>
 					<ul id="parkingAll">

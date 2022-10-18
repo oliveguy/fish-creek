@@ -121,6 +121,8 @@ for(let i=0;i<monsters.length;i++){
                 document.querySelectorAll(".z-monsterdesc")[0].innerHTML = data.monDesc;
                 document.querySelectorAll(".z-locationname")[0].innerHTML = data.siteName;
                 document.querySelectorAll(".z-locationdesc")[0].innerHTML = data.siteDesc;
+                // Activity
+                document.querySelectorAll(".activity")[0].innerHTML = data.activity;
             // Parking Lot git addInfo
                 let parkingdata = [data.parking1,data.parking2,data.parking3];
                 let removelist = document.querySelectorAll('.parkinglistup');
@@ -257,10 +259,9 @@ for(let i=0;i<monsters.length;i++){
         .then(res => res.json())
         .then(function(data){
             let discard2 = document.querySelectorAll(".z-reviewer");
-            console.log('view')
-                // for(let i=0;i<discard2.length;i++){
-                //     discard2[i].remove()
-                // }
+                for(let i=0;i<discard2.length;i++){
+                    discard2[i].remove()
+                }
                 for(const inner in data.reviewPost){
                     // console.log(data.reviewPost[inner].author+" / "+data.reviewPost[inner].content+" / "+data.reviewPost[inner].date);
                     // CREATE LI ELEMENT
