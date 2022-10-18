@@ -99,18 +99,19 @@ var modalCtr = {
 document.querySelectorAll('.closeBtnImg_1')[0].addEventListener('click',()=>{
     modalCtr.modalClose('.z-monstermodal');
 })
+
 const monsters = document.querySelectorAll('.monster_svg');
-var obje ={};
+var id_review;
 for(let i=0;i<monsters.length;i++){
     monsters[i].addEventListener('click',()=>{
-        // Coloring Monter Icon
-        monsters[i].style.filter="none";
-        // AJAX -- Mon & Site
+    // Coloring Monter Icon
+    monsters[i].style.filter="none";
+    // AJAX -- Mon & Site
         fetch("./asset/php_module/monster_site.php?id="+i)
         .then(res => res.json())
         .then(function(data){
-                // console.log(data);
-                obje = data;
+                id_review = data.siteID;
+                
             // modal window open/close
                 modalCtr.modalOpen('flex');
             // Contents insert
@@ -156,12 +157,110 @@ for(let i=0;i<monsters.length;i++){
                 siteimg2.alt = data.siteName;
             // REVIEW
             let discard = document.querySelectorAll(".z-reviewer");
-            for(let i=0;i<discard.length;i++){
-                discard[i].remove()
-                // document.querySelectorAll(".z-user")[i].innerHTML = "";
-                // document.querySelectorAll(".z-review")[i].innerHTML = "";
-                // document.querySelectorAll(".z-user_time")[i].innerHTML = "";
+                for(let i=0;i<discard.length;i++){
+                    discard[i].remove()
+                }
+                for(const inner in data.reviewPost){
+                    // console.log(data.reviewPost[inner].author+" / "+data.reviewPost[inner].content+" / "+data.reviewPost[inner].date);
+                    // CREATE LI ELEMENT
+                    let addList = document.createElement('li');
+                    addList.classList.add('z-reviewer');
+                    addList.id = "list_"+data.reviewPost[inner].date;
+                    reviewListing.prepend(addList);
+
+                    let listID = document.getElementById("list_"+data.reviewPost[inner].date);
+                    
+
+                    // INSERT USER NAME
+                    let p_user = document.createElement('p');
+                    p_user.classList.add('z-user');
+                    p_user.id = "p_user"+data.reviewPost[inner].date;
+                    listID.appendChild(p_user);
+                    let puser = document.getElementById("p_user"+data.reviewPost[inner].date);
+                    puser.innerHTML = data.reviewPost[inner].author;
+
+                    //INSERT REVIEW CONTENT
+                    let p_review = document.createElement('p');
+                    p_review.classList.add('z-review');
+                    p_review.id = "p_content"+data.reviewPost[inner].date;
+                    listID.appendChild(p_review);
+                    let preview = document.getElementById("p_content"+data.reviewPost[inner].date);
+                    preview.innerHTML = data.reviewPost[inner].content;
+
+                    //INSERT REVIEW DATE CONTENT
+                    let p_date = document.createElement('p');
+                    p_date.classList.add('z-review_time');
+                    p_date.id = "p_date"+data.reviewPost[inner].date;
+                    listID.appendChild(p_date);
+                    let pdate = document.getElementById("p_date"+data.reviewPost[inner].date);
+                    pdate.innerHTML = data.reviewPost[inner].date;
+                }
+                
+            })
+        .catch(function(error){
+            console.log(error)
+        })
+    })
+}
+// REVIEW POST AJAX
+// get today date
+    var current = new Date();
+    var year = current.getFullYear();
+    var month = ('0' + (current.getMonth() + 1)).slice(-2);
+    var day = ('0' + current.getDate()).slice(-2);
+    var today = year + '-' + month  + '-' + day;
+
+    var httpRequest;
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        let dataAjax = 
+        "id='"+id_review+
+        "'&user='"+user.value+
+        "'&review='"+review.value+
+        "'&date='"+today+"'";
+
+        postRequest("./asset/php_module/reviewPOST.php", dataAjax);
+
+        function postRequest(url, reqData){
+
+            httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = consoleShowContents;
+            httpRequest.open('POST',url,true);
+            httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            
+            httpRequest.send(reqData);
+
+            if(!httpRequest){
+                alert('Cannot make XMLHTTP instance');
+            return false;
             }
+        }
+        function consoleShowContents(){
+            try{
+                if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                if (httpRequest.status === 200) {
+                    // console.log(httpRequest.responseText);
+                    
+                    } else {
+                    console.log('request failed.');
+                    }
+                }
+            }
+            catch(error){
+                console.log(error.descrption);
+            }
+        }
+        user.value ="";
+        review.value = "";
+        //// RE-FETCH REVIEW POST
+        fetch("./asset/php_module/monster_site.php?id="+id_review)
+        .then(res => res.json())
+        .then(function(data){
+            let discard2 = document.querySelectorAll(".z-reviewer");
+            console.log('view')
+                // for(let i=0;i<discard2.length;i++){
+                //     discard2[i].remove()
+                // }
                 for(const inner in data.reviewPost){
                     // console.log(data.reviewPost[inner].author+" / "+data.reviewPost[inner].content+" / "+data.reviewPost[inner].date);
                     // CREATE LI ELEMENT
@@ -198,9 +297,9 @@ for(let i=0;i<monsters.length;i++){
                     pdate.innerHTML = data.reviewPost[inner].date;
                 }
             })
-            
         .catch(function(error){
             console.log(error)
         })
     })
-}
+    // REVIEW POST AJAX END -
+

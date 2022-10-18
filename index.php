@@ -1168,14 +1168,14 @@ include('asset/php_module/db_connection.php');
 						<p class="z-review_time"></p>
 					</li>
                     <li>
-                        <form method="post" action="#" class="review_post">
+                        <form method="post" action="#" class="review_post" id="form">
                             <label for="z-testimonial-name"></label>
-                            <input type="text" name="z-testimonial-name" placeholder="your name" class="name_input">
+                            <input type="text" name="z-testimonial-name" placeholder="your name" class="name_input" id="user">
 
                             <label for="z-testimonial"></label>
-                            <input type="text" name="z-testimonial" placeholder="your review" class="z-testimonial">
+                            <input type="text" name="z-testimonial" placeholder="your review" class="z-testimonial" id="review">
 
-                            <input class="z-submit" type="submit" value="SUBMIT">
+                            <input class="z-submit" type="submit" value="Submit">
                         </form>
                     </li>
                 </ul>

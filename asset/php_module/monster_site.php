@@ -9,6 +9,7 @@ include("db_connection.php");
     $row = mysqli_fetch_array($sql);
 
     $obj=(object) 'modal';
+        $obj->siteID=$row['id'];
         $obj->monName=$row['monster_name'];
         $obj->monDesc=$row['monster_desc'];
         $obj->monImg=$row['monster_img'];
