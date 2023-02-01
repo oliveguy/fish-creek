@@ -1,4 +1,4 @@
-# <img src="https://github.com/oliveguy/tremolo/blob/main/public/images/logo.png?raw=true">
+# ![logoWH](https://user-images.githubusercontent.com/103153516/216192816-02cf5395-1286-4530-a4bb-c5f9c5c9fd17.png)
 - Interactive map for Fish Creek Provincial Park
 - The map provides you with ample information on interesting points of Fish Creek Park by mythical creatures.
 
